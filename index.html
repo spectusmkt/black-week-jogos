@@ -150,9 +150,9 @@ h1,h2,h3{line-height:1.2}
 /* ---------- Tudo que tem dentro ---------- */
 .dentro{background:#fff}
 .dentro h2{max-width:520px;margin:0 auto}
-.pilulas{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;max-width:640px;margin:26px auto 0}
-.pilulas span{background:var(--lavanda);color:var(--roxo-esc);border:1px solid rgba(91,84,166,.18);border-radius:30px;padding:9px 14px;font-size:.82rem;font-weight:500;text-transform:uppercase;text-align:center}
-@media(max-width:600px){.pilulas{grid-template-columns:1fr}}
+.pilulas{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;max-width:900px;margin:30px auto 0}
+.pilulas span{display:flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;background:var(--lavanda);color:var(--roxo-esc);border:1px solid rgba(91,84,166,.18);border-radius:30px;padding:12px 18px;font-size:.86rem;font-weight:500;text-transform:uppercase}
+@media(max-width:600px){.pilulas{grid-template-columns:1fr}.pilulas span{font-size:.74rem;padding:11px 12px;gap:8px}}
 .basico{background:#F4F2F8;margin-top:56px;padding:56px 0}
 .basico .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}
 .basico .chk{display:flex;align-items:center;gap:14px;margin-bottom:12px}
@@ -167,9 +167,14 @@ h1,h2,h3{line-height:1.2}
 .trilho{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 20px 10px;-webkit-overflow-scrolling:touch}
 .trilho::-webkit-scrollbar{display:none}
 .trilho > *{flex:0 0 auto;scroll-snap-align:center}
-.jogo{width:300px;aspect-ratio:344/571;border-radius:18px;overflow:hidden;box-shadow:0 8px 20px rgba(45,38,90,.12)}
+.esteira{overflow:hidden;margin-top:40px;padding:6px 0 14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.esteira-trilho{display:flex;width:max-content;animation:esteira 190s linear infinite}
+.esteira:hover .esteira-trilho{animation-play-state:paused}
+@keyframes esteira{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.esteira{overflow-x:auto}.esteira-trilho{animation:none}}
+.jogo{width:300px;margin-right:18px;flex:none;aspect-ratio:344/571;border-radius:18px;overflow:hidden;box-shadow:0 8px 20px rgba(45,38,90,.12)}
 .jogo img{width:100%;height:100%;object-fit:cover}
-@media(max-width:600px){.jogo{width:72vw}}
+@media(max-width:600px){.jogo{width:62vw;margin-right:14px}.esteira-trilho{animation-duration:150s}}
 .seta{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:none;background:#fff;color:var(--roxo);font-size:1.6rem;line-height:1;box-shadow:0 6px 18px rgba(0,0,0,.18);cursor:pointer;z-index:3;display:flex;align-items:center;justify-content:center}
 .seta.prev{left:8px}.seta.next{right:8px}
 .passe{margin-top:14px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--cinza);text-align:center}
@@ -184,29 +189,55 @@ h1,h2,h3{line-height:1.2}
 .bonus-head{padding:12px 0 30px}
 .bonus-head h2{font-size:clamp(1.5rem,3.2vw,2rem);font-weight:900;text-transform:uppercase}
 .bonus-head p{max-width:420px;margin:10px auto 0;color:rgba(255,255,255,.9)}
-.item{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;align-items:center;background:#F4F2F8;color:var(--tinta);padding:30px 34px;margin:0 -20px 26px}
-.item .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--roxo);padding:4px 12px;border-radius:20px;margin-bottom:10px}
-.item .tag--bonus{background:var(--rosa)}
-.item h3{font-size:1.45rem;font-weight:700;line-height:1.25}
-.item h3 small{display:block;font-size:1.05rem;font-weight:500}
-.item .uso{margin-top:8px;color:var(--cinza);font-size:.98rem}
-.item .uso b{color:var(--tinta)}
-.item .val{margin-top:14px;font-weight:700;font-size:1.05rem}
-.item .val s{color:#d14b4b}
-.item .val .gratis{display:block;color:#2e9e6b}
-.item .img{display:flex;justify-content:center}
-.item .img img{max-height:260px;width:auto}
-.item .img .capa{height:240px;aspect-ratio:3/4;border-radius:10px;box-shadow:0 14px 28px rgba(0,0,0,.22);object-fit:cover}
-.capa-pop{height:240px;aspect-ratio:3/4;border-radius:10px;box-shadow:0 14px 28px rgba(0,0,0,.22);background:linear-gradient(160deg,var(--roxo-noite),#15112a);border-left:6px solid var(--amarelo);display:flex;flex-direction:column;justify-content:center;padding:20px;color:#fff;text-transform:uppercase;font-weight:900;line-height:1.05}
-.capa-pop small{font-size:.7rem;letter-spacing:1.5px;font-weight:700;opacity:.8}
-.capa-pop span{font-size:1.7rem;color:var(--amarelo);margin-top:6px}
-.capa-pop i{font-style:normal;font-size:2.2rem;margin-top:14px}
-.item--plat{background:#fff;border:3px solid var(--amarelo)}
-.item--plat .img img{max-height:170px}
-.soma{background:var(--amarelo);color:var(--roxo-noite);border-radius:16px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:1.05rem;margin-bottom:10px}
+.plat{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;background:#fff;color:var(--tinta);border:3px solid var(--amarelo);border-radius:22px;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.3);margin-bottom:26px;text-align:left}
+.plat .txt{padding:30px 34px}
+.plat .stage{align-self:stretch;min-height:240px;aspect-ratio:auto}
+.selo-num{display:inline-block;background:#000;color:var(--amarelo);border:1px solid var(--amarelo);font-weight:900;font-size:.7rem;letter-spacing:1.8px;text-transform:uppercase;padding:5px 12px;border-radius:5px}
+.plat h3{font-size:1.5rem;margin:12px 0 8px}
+.plat p{color:var(--cinza)}
+.plat p b{color:var(--tinta)}
+.plat .ref{margin-top:12px;font-weight:700;color:var(--roxo)}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bcard{background:#fff;color:var(--tinta);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;text-align:left;box-shadow:0 18px 40px rgba(0,0,0,.28);transition:transform .2s ease, box-shadow .2s ease}
+.bcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(0,0,0,.35)}
+.stage{position:relative;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:22px;background:radial-gradient(circle at 50% 38%,#7a72d6 0%,var(--roxo) 38%,var(--roxo-noite) 100%);overflow:hidden}
+.stage:after{content:'';position:absolute;left:14%;right:14%;bottom:8%;height:14px;border-radius:50%;background:rgba(0,0,0,.35);filter:blur(8px)}
+.stage img{position:relative;z-index:1;max-width:100%;max-height:100%;width:auto;height:auto}
+.stage .capa{height:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;box-shadow:0 14px 28px rgba(0,0,0,.4)}
+.stage .selo-num{position:absolute;top:14px;left:14px;z-index:2}
+.bbody{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.bbody h3{font-size:1.08rem;line-height:1.3}
+.bbody h3 small{display:block;font-size:.88rem;font-weight:500;color:var(--cinza);margin-top:2px}
+.bbody .uso{margin-top:10px;font-size:.9rem;color:var(--cinza);flex:1}
+.bbody .uso b{color:var(--tinta)}
+.bfoot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px dashed rgba(91,84,166,.25)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#E7F5EE;color:#23865a;font-weight:700;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;padding:5px 12px;border-radius:30px}
+.chip:before{content:'✓'}
+.bfoot .de{font-size:.85rem;color:var(--cinza)}
+.bfoot .de s{color:#d14b4b}
+.capa-pop{height:100%;aspect-ratio:3/4;border-radius:8px;box-shadow:0 14px 28px rgba(0,0,0,.4);background:linear-gradient(160deg,#15112a,#000);border-left:5px solid var(--amarelo);display:flex;flex-direction:column;justify-content:center;padding:14px;color:#fff;text-transform:uppercase;font-weight:900;line-height:1.05;position:relative;z-index:1}
+.capa-pop small{font-size:.58rem;letter-spacing:1.5px;font-weight:700;opacity:.8}
+.capa-pop span{font-size:1.15rem;color:var(--amarelo);margin-top:4px}
+.capa-pop i{font-style:normal;font-size:1.6rem;margin-top:10px}
+@media(max-width:900px){.bgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){
+  .plat{grid-template-columns:1fr}.plat .stage{min-height:200px;order:-1}.plat .txt{padding:24px 22px;text-align:center}
+  .bgrid{grid-template-columns:1fr;gap:14px}
+  .bcard{flex-direction:row}
+  .bcard .stage{width:40%;flex:none;aspect-ratio:auto;padding:30px 10px 14px}
+  .bcard .stage .selo-num{top:8px;left:8px;font-size:.56rem;padding:3px 7px;letter-spacing:1px}
+  .bcard .stage img{max-height:120px}
+  .bcard .stage .capa,.bcard .capa-pop{height:110px}
+  .bcard .capa-pop{padding:10px 8px;border-left-width:4px}.bcard .capa-pop small{font-size:.45rem}.bcard .capa-pop span{font-size:.72rem}.bcard .capa-pop i{font-size:1.1rem;margin-top:6px}
+  .bbody{padding:14px}
+  .bbody h3{font-size:.98rem}
+  .bbody .uso{font-size:.84rem;margin-top:6px}
+  .bfoot{margin-top:10px;padding-top:10px}
+}
+.soma{background:var(--amarelo);color:var(--roxo-noite);border-radius:16px;padding:18px 24px;margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:1.05rem;margin-bottom:10px}
 .soma s{opacity:.7}
 .soma b{font-weight:900}
-@media(max-width:760px){.item{grid-template-columns:1fr;text-align:center;padding:28px 22px}.item .img{order:-1}.soma{justify-content:center;text-align:center}}
+@media(max-width:760px){.soma{justify-content:center;text-align:center}}
 body:not(.com-ancora) .ancora{display:none!important}
 body.com-ancora .sem-ancora{display:none!important}
 
@@ -464,12 +495,9 @@ footer a{color:var(--amarelo)}
       <div class="mock"><img src="img/e91164afc1c5ac3bf751c6c3c6915579.webp" alt="Plataforma em computador, notebook, tablet e celular"></div>
     </div>
   </div>
-  <div class="carrossel">
-    <button class="seta prev" aria-label="Anterior">‹</button>
-    <div class="trilho" id="trilhoJogos"></div>
-    <button class="seta next" aria-label="Próximo">›</button>
+  <div class="esteira" aria-label="Alguns dos jogos da plataforma">
+    <div class="esteira-trilho" id="trilhoJogos"></div>
   </div>
-  <p class="passe">Passe para o lado</p>
   <div class="cta" style="padding-bottom:64px"><a href="#planos" class="btn btn--claro">Assine agora</a></div>
 </section>
 
@@ -483,75 +511,65 @@ footer a{color:var(--amarelo)}
       <p>Assine agora a plataforma e leve junto 6 bônus exclusivos para usar nas suas aulas:</p>
     </div>
 
-    <div class="item item--plat">
-      <div>
-        <span class="tag">Produto principal</span>
+    <div class="plat">
+      <div class="txt">
+        <span class="selo-num">Produto principal</span>
         <h3>Plataforma Jogos Pedagógicos Musicais</h3>
-        <p class="uso"><b>Use</b> mais de 40 jogos, materiais em PDF, a Tarefa de Casa e a assistente Bia Criativa nas suas aulas online e presenciais.</p>
-        <p class="val ancora">R$1.347</p>
+        <p><b>Use</b> mais de 40 jogos, materiais em PDF, a Tarefa de Casa e a assistente Bia Criativa nas suas aulas online e presenciais.</p>
+        <p class="ref ancora">Valor de referência: R$1.347</p>
       </div>
-      <div class="img"><img src="img/e91164afc1c5ac3bf751c6c3c6915579.webp" alt="Plataforma Jogos Pedagógicos Musicais"></div>
+      <div class="stage"><img src="img/e91164afc1c5ac3bf751c6c3c6915579.webp" alt="Plataforma Jogos Pedagógicos Musicais"></div>
     </div>
 
-    <div class="item">
-      <div>
-        <span class="tag tag--bonus">Bônus 1</span>
-        <h3>Curso AMO<small>(Aulas de Música Online no Zoom)</small></h3>
-        <p class="uso"><b>Prepare</b> e conduza aulas de música online.</p>
-        <p class="val"><span class="ancora">de <s>R$350</s></span><span class="gratis ancora">Grátis</span><span class="gratis sem-ancora">Incluso</span></p>
+    <div class="bgrid">
+      <div class="bcard">
+        <div class="stage"><span class="selo-num">Bônus 1</span><img src="img/5797d06130df4658c9a5826991f4998e.webp" alt="Curso AMO" loading="lazy"></div>
+        <div class="bbody">
+          <h3>Curso AMO<small>Aulas de Música Online no Zoom</small></h3>
+          <p class="uso"><b>Prepare</b> e conduza aulas de música online.</p>
+          <div class="bfoot"><span class="chip">Incluso</span><span class="de ancora">de <s>R$350</s></span></div>
+        </div>
       </div>
-      <div class="img"><img src="img/5797d06130df4658c9a5826991f4998e.webp" alt="Curso AMO - Aulas de Música Online"></div>
-    </div>
-
-    <div class="item">
-      <div>
-        <span class="tag tag--bonus">Bônus 2</span>
-        <h3>MASTERCLASS<small>Como Transformar Seguidores em Alunos</small></h3>
-        <p class="uso"><b>Organize</b> sua comunicação para apresentar suas aulas.</p>
-        <p class="val"><span class="ancora">de <s>R$297</s></span><span class="gratis ancora">Grátis</span><span class="gratis sem-ancora">Incluso</span></p>
+      <div class="bcard">
+        <div class="stage"><span class="selo-num">Bônus 2</span><img src="img/09faf8ab70450977ee034d0e0df7cf54.webp" alt="Masterclass" loading="lazy"></div>
+        <div class="bbody">
+          <h3>Masterclass<small>Como Transformar Seguidores em Alunos</small></h3>
+          <p class="uso"><b>Organize</b> sua comunicação para apresentar suas aulas.</p>
+          <div class="bfoot"><span class="chip">Incluso</span><span class="de ancora">de <s>R$297</s></span></div>
+        </div>
       </div>
-      <div class="img"><img src="img/09faf8ab70450977ee034d0e0df7cf54.webp" alt="Masterclass Como Transformar Seguidores em Alunos"></div>
-    </div>
-
-    <div class="item">
-      <div>
-        <span class="tag tag--bonus">Bônus 3</span>
-        <h3>OFICINA<small>Professor Criativo + materiais</small></h3>
-        <p class="uso"><b>Explore</b> propostas de aula e consulte os materiais da oficina.</p>
-        <p class="val"><span class="ancora">de <s>R$298</s></span><span class="gratis ancora">Grátis</span><span class="gratis sem-ancora">Incluso</span></p>
+      <div class="bcard">
+        <div class="stage"><span class="selo-num">Bônus 3</span><img src="img/cb277cebc01a570fba051a8c00f35c17.webp" alt="Oficina Professor Criativo" loading="lazy"></div>
+        <div class="bbody">
+          <h3>Oficina Professor Criativo<small>+ materiais da oficina</small></h3>
+          <p class="uso"><b>Explore</b> propostas de aula e consulte os materiais da oficina.</p>
+          <div class="bfoot"><span class="chip">Incluso</span><span class="de ancora">de <s>R$298</s></span></div>
+        </div>
       </div>
-      <div class="img"><img src="img/cb277cebc01a570fba051a8c00f35c17.webp" alt="Oficina Professor Criativo"></div>
-    </div>
-
-    <div class="item">
-      <div>
-        <span class="tag tag--bonus">Bônus 4</span>
-        <h3>Guia de Cifras</h3>
-        <p class="uso"><b>Consulte</b> a notação de acordes ao preparar a aula.</p>
-        <p class="val"><span class="ancora">de <s>R$90</s></span><span class="gratis ancora">Grátis</span><span class="gratis sem-ancora">Incluso</span></p>
+      <div class="bcard">
+        <div class="stage"><span class="selo-num">Bônus 4</span><img class="capa" src="img/bonus-guia-cifras.png" alt="Guia das Cifras" loading="lazy"></div>
+        <div class="bbody">
+          <h3>Guia de Cifras</h3>
+          <p class="uso"><b>Consulte</b> a notação de acordes ao preparar a aula.</p>
+          <div class="bfoot"><span class="chip">Incluso</span><span class="de ancora">de <s>R$90</s></span></div>
+        </div>
       </div>
-      <div class="img"><img class="capa" src="img/bonus-guia-cifras.png" alt="Guia das Cifras"></div>
-    </div>
-
-    <div class="item">
-      <div>
-        <span class="tag tag--bonus">Bônus 5</span>
-        <h3>Kit 50 Acompanhamentos</h3>
-        <p class="uso"><b>Tenha</b> bases para variar as atividades e a prática no piano.</p>
-        <p class="val"><span class="ancora">de <s>R$67</s></span><span class="gratis ancora">Grátis</span><span class="gratis sem-ancora">Incluso</span></p>
+      <div class="bcard">
+        <div class="stage"><span class="selo-num">Bônus 5</span><img class="capa" src="img/bonus-kit50.png" alt="Kit 50 Acompanhamentos" loading="lazy"></div>
+        <div class="bbody">
+          <h3>Kit 50 Acompanhamentos</h3>
+          <p class="uso"><b>Tenha</b> bases para variar as atividades e a prática no piano.</p>
+          <div class="bfoot"><span class="chip">Incluso</span><span class="de ancora">de <s>R$67</s></span></div>
+        </div>
       </div>
-      <div class="img"><img class="capa" src="img/bonus-kit50.png" alt="Kit 50 Acompanhamentos"></div>
-    </div>
-
-    <div class="item">
-      <div>
-        <span class="tag tag--bonus">Bônus 6</span>
-        <h3>Pack de Partituras Pop</h3>
-        <p class="uso"><b>Amplie</b> o repertório para trabalhar com os alunos.</p>
-        <p class="val"><span class="ancora">de <s>R$198</s></span><span class="gratis ancora">Grátis</span><span class="gratis sem-ancora">Incluso</span></p>
+      <div class="bcard">
+        <div class="stage"><span class="selo-num">Bônus 6</span><div class="capa-pop"><small>Pack de</small><span>Partituras Pop</span><i>🎼</i></div></div>
+        <div class="bbody">
+          <h3>Pack de Partituras Pop</h3>
+          <p class="uso"><b>Amplie</b> o repertório para trabalhar com os alunos.</p>
+          <div class="bfoot"><span class="chip">Incluso</span><span class="de ancora">de <s>R$198</s></span></div>
+        </div>
       </div>
-      <!-- Sem imagem do produto: capa provisória. Troque por <img class="capa" src="img/SEU-ARQUIVO"> quando tiver. -->
-      <div class="img"><div class="capa-pop"><small>Pack de</small><span>Partituras Pop</span><i>🎼</i></div></div>
     </div>
 
     <div class="soma ancora">
@@ -834,9 +852,11 @@ footer a{color:var(--amarelo)}
 
   /* Cartões dos jogos (mesma ordem da página antiga) */
   var jogos = ['4ccd958f893b4e917d0363787d76e8af','a9fee02902f98c88fd9051a62ab3ead4','85fc4c949cd0254cf276224571e78db2','2e0a5f45bab1947e62204a7b88b27464','bb32c0081a8841f70fa9420f04a713e6','f9b84f02d623f58b414996654accc345','7926546cd11fecefaeb8f5e7dde8a1a5','b2f3414180b23d052247e8439edeb826','0b0ebac394e8312e036405a323a739ba','2533e1e4d48130cd77ad969818d4878b','f164ab9b8852c92d8779e05249a5a872','5e9a8610697afd393193dca79b8b19da','d4a6bbde2078d86d576ab1b2d3de69a2','ba62475354bb6b70d3cd5d1255a7d035','4e26409af2ae85669698fcd3f40e897e','8e3f3b5ce42e278026e3f128586a9b73','7957725560046ad8753291c2ecb7b15f','fc0e993355c0b2150f31dc204caf9829','e4055cc79df7a9656a939a6590585463','f9d6de3a01b1459156a17a17b28c0316','dc444ef987a25195fab9857c8dcd17ac','5ca8d9fc19993262e7f095d70b2ec392','25f1001d82741f521181371e7765645e','caf7ce68bdf7692765416bff1de62c47','a08b73c34110ec9414d436141405ee5c','35b74ec5fe19c2226bb4fa6fda9e3f82','a9dc2097029cd018aab328e194cbd4b6','245694452f62908a523bd9930d37b482','ab96ef91d7c80ad1eb60fd549e4dd366','888abd2e9161cb5a7f8c67c180da1261','c4b5832409c134de0662ddc32f628d63','95be84bb25ac4856cf4be01974c1664d','ba6d512c4b42b257a73440cf786036d0','f1b5abe2de0611d1987d37f67ce6a9b4','6ad8f8a24f8a530cc621c289d508e574','279f6b89cdd7ccc72c4436bd859079d9','7a2f550e831dcdf1d41bce357a8fb387','8cd1439ccc1408cf642756348629a667','f89d079db8c141d199a47b0567065248','c627dc23a88b7e1648d70138febd6f5f','f430303ea4f4350fa84cbd69a0ee81dc','c02343d00107b1c464be1a832701f8d1','9f7c99d3677292951719d66c4a9ba74e','4734ba203be2fe3da53403105bc7a614','d8c41354cb7075aa3049500dd7ab4848','372767d061c6066669b87157bc59ddde','1d98da7bda59f508edfab078d036d692','63131253e0e7b0f528552abad0a0489e'];
-  document.getElementById('trilhoJogos').innerHTML = jogos.map(function(h){
+  var cartoes = jogos.map(function(h){
     return '<div class="jogo"><img src="img/'+h+'.webp" alt="Jogo da plataforma" loading="lazy"></div>';
   }).join('');
+  /* a lista aparece duas vezes para a esteira girar sem emenda */
+  document.getElementById('trilhoJogos').innerHTML = cartoes + cartoes.replace(/alt="Jogo da plataforma"/g, 'alt="" aria-hidden="true"');
 
   /* Cronômetro até o fim real da Black Week */
   var fim = new Date(C.FIM_CAMPANHA).getTime();
@@ -864,6 +884,7 @@ footer a{color:var(--amarelo)}
     c.querySelector('.next').addEventListener('click', function(){ t.scrollBy({left:passo(),behavior:'smooth'}); });
     c.querySelector('.prev').addEventListener('click', function(){ t.scrollBy({left:-passo(),behavior:'smooth'}); });
   });
+
 
   /* FAQ (primeira pergunta aberta, como na página antiga) */
   var itens = document.querySelectorAll('.faq-item');
