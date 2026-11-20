@@ -402,13 +402,32 @@ body.com-ancora .sem-ancora{display:none!important}
 @media(max-width:760px){.sup-top{grid-template-columns:1fr;text-align:center}.sup-top .ic img{width:170px}.sup-prints{grid-template-columns:1fr;max-width:300px;margin-left:auto;margin-right:auto}}
 
 /* ---------- Autora ---------- */
-.autora{padding:40px 0 0}
-.autora .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end}
-.autora .t{padding-bottom:40px}
-.autora h2{font-size:1.5rem;font-weight:700;margin-bottom:16px}
-.autora p{color:var(--cinza);margin-bottom:14px;font-size:.98rem}
-.autora img{max-height:330px;width:auto;margin:0 auto}
-@media(max-width:760px){.autora .wrap{grid-template-columns:1fr;text-align:center}.autora .t{padding-bottom:10px}}
+.autora{background:radial-gradient(ellipse at 15% 50%,rgba(91,84,166,.12),transparent 55%),#fff;overflow:hidden}
+.autora .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.autora-foto{position:relative;max-width:440px;width:100%;justify-self:center}
+.autora-foto:before{content:'';position:absolute;inset:24px -24px -24px 24px;border-radius:28px;background:linear-gradient(135deg,var(--roxo),var(--roxo-esc));z-index:0}
+.autora-foto img{position:relative;z-index:1;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:28px;border:4px solid var(--amarelo);box-shadow:0 24px 50px rgba(45,38,90,.25)}
+.af-selo{position:absolute;z-index:2;background:#000;color:#fff;border:1.5px solid var(--amarelo);border-radius:12px;padding:10px 16px;font-weight:700;font-size:.9rem;box-shadow:0 12px 28px rgba(0,0,0,.3);white-space:nowrap}
+.af-selo--1{left:-22px;bottom:56px}
+.af-selo--2{right:-30px;top:40px}
+.autora-txt .bw-selo{margin-bottom:16px}
+.autora h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:900;color:var(--tinta);margin-bottom:16px}
+.autora p{color:var(--cinza);font-size:1.05rem;margin-bottom:14px;max-width:560px}
+.autora p.lead{font-size:1.18rem;color:var(--tinta)}
+.autora-nums{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px;max-width:620px}
+.autora-nums li{background:var(--lavanda);border:1px solid rgba(91,84,166,.15);border-radius:16px;padding:16px}
+.autora-nums b{display:block;font-size:1.9rem;font-weight:900;color:var(--roxo);line-height:1}
+.autora-nums span{display:block;font-size:.84rem;color:var(--cinza);margin-top:6px;line-height:1.35}
+@media(max-width:860px){
+  .autora .wrap{grid-template-columns:1fr;gap:44px;text-align:center}
+  .autora-foto{max-width:300px}
+  .autora-foto:before{inset:16px -16px -16px 16px}
+  .af-selo{font-size:.78rem;padding:8px 12px}
+  .af-selo--1{left:-14px;bottom:30px}.af-selo--2{right:-18px;top:22px}
+  .autora p{margin-left:auto;margin-right:auto}
+  .autora-nums{grid-template-columns:1fr 1fr 1fr;gap:8px;margin-left:auto;margin-right:auto}
+  .autora-nums li{padding:12px 8px}.autora-nums b{font-size:1.35rem}.autora-nums span{font-size:.72rem}
+}
 
 /* ---------- Garantia ---------- */
 .garantia{background:#F4F2F8}
@@ -1001,14 +1020,24 @@ footer a{color:var(--amarelo)}
 </section>
 
 <!-- ================= AUTORA ================= -->
-<section class="autora">
+<section class="sec autora">
   <div class="wrap">
-    <div class="t">
-      <h2>Prof. Bianca Ribeiro</h2>
-      <p>Doutora em Teoria e Análise Musical (USP), professora de piano e iniciação musical há mais de 30 anos, especialista em ensino criativo para crianças e adolescentes.</p>
-      <p>Criadora de materiais didáticos que facilitam o trabalho do professor na prática real de sala de aula.</p>
+    <div class="autora-foto">
+      <img src="img/bianca-retrato.jpg" alt="Prof. Bianca Ribeiro sorrindo, segurando uma batuta de mão" width="720" height="1080" loading="lazy" decoding="async">
+      <span class="af-selo af-selo--1">🎓 Doutora pela USP</span>
+      <span class="af-selo af-selo--2">🎹 +30 anos de piano</span>
     </div>
-    <img src="img/23a6e941eff9da1f1ffebcf39f55e329.webp" alt="Prof. Bianca Ribeiro" loading="lazy">
+    <div class="autora-txt">
+      <span class="bw-selo"><b>Quem criou</b><i></i>a plataforma</span>
+      <h2>Prof. Bianca Ribeiro</h2>
+      <p class="lead">Doutora em Teoria e Análise Musical (USP), professora de piano e iniciação musical há mais de 30 anos, especialista em ensino criativo para crianças e adolescentes.</p>
+      <p>Criadora de materiais didáticos que facilitam o trabalho do professor na prática real de sala de aula.</p>
+      <ul class="autora-nums">
+        <li><b>+30</b><span>anos ensinando piano e iniciação musical</span></li>
+        <li><b>+40</b><span>jogos pedagógicos criados para a plataforma</span></li>
+        <li><b>+2.500</b><span>professores usando nas aulas</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
