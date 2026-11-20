@@ -52,7 +52,7 @@ fbq('init', '4709244815771841');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" alt=""
-src="https://www.facebook.com/tr?id=4709244815771841&ev=PageView&noscript=1"/></noscript>
+src="https://www.facebook.com/tr?id=4709244815771841&ev=PageView&noscript=1"/ loading="lazy" decoding="async"></noscript>
 <!-- End Meta Pixel Code -->
 
 <title>Jogos Pedagógicos Musicais | Black Week</title>
@@ -71,9 +71,8 @@ src="https://www.facebook.com/tr?id=4709244815771841&ev=PageView&noscript=1"/></
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://spectusmkt.github.io/black-week-jogos/img/compartilhar.jpg">
 <link rel="icon" href="img/logo-jpm.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/08c591dc08fec71bf85ce9ec909ac1be.webp" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/65dab3fa38bcd1b7de234ffd428057c4.webp" media="(min-width:761px)">
 <style>
 /* ============================================================
    CORES DA MARCA NOVA (logo / página oferta.)
@@ -94,7 +93,7 @@ src="https://www.facebook.com/tr?id=4709244815771841&ev=PageView&noscript=1"/></
   --tinta:#2A2540;
   --escuro:#1d1838;
   --cinza:#5f5a72;
-  --fonte:'Roboto',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --fonte:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
   /* ajuste do azul das imagens antigas para o roxo */
   --hue:hue-rotate(38deg) saturate(.9);
 }
@@ -122,7 +121,7 @@ h1,h2,h3{line-height:1.2}
 
 /* ---------- Cronômetro (topo) ---------- */
 .topo{background:#000;color:#fff;text-align:center;padding:10px 12px 12px;position:sticky;top:0;z-index:50}
-.topo h4{font-size:1.15rem;font-weight:700;letter-spacing:.3px;margin-bottom:6px}
+.topo .topo-t{font-size:1.15rem;font-weight:700;letter-spacing:.3px;margin-bottom:6px}
 .cd{display:inline-flex;align-items:flex-end;gap:6px}
 .cd div{display:flex;flex-direction:column;align-items:center;gap:3px}
 .cd small{font-size:.55rem;text-transform:uppercase;color:rgba(255,255,255,.75)}
@@ -230,7 +229,7 @@ h1,h2,h3{line-height:1.2}
 .bbody .uso{margin-top:10px;font-size:.9rem;color:var(--cinza);flex:1}
 .bbody .uso b{color:var(--tinta)}
 .bfoot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px dashed rgba(91,84,166,.25)}
-.chip{display:inline-flex;align-items:center;gap:6px;background:#E7F5EE;color:#23865a;font-weight:700;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;padding:5px 12px;border-radius:30px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#E7F5EE;color:#17623f;font-weight:700;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;padding:5px 12px;border-radius:30px}
 .chip:before{content:'✓'}
 .bfoot .de{font-size:.85rem;color:var(--cinza)}
 .bfoot .de s{color:#d14b4b}
@@ -244,7 +243,7 @@ h1,h2,h3{line-height:1.2}
   .bgrid{grid-template-columns:1fr;gap:14px}
   .bcard{flex-direction:row}
   .bcard .stage{width:40%;flex:none;aspect-ratio:auto;padding:30px 10px 14px}
-  .bcard .stage .selo-num{top:8px;left:8px;font-size:.56rem;padding:3px 7px;letter-spacing:1px}
+  .bcard .stage .selo-num{top:8px;left:8px;font-size:.62rem;padding:3px 7px;letter-spacing:1px}
   .bcard .stage img{max-height:120px}
   .bcard .stage .capa,.bcard .capa-pop{height:110px}
   .bcard .capa-pop{padding:10px 8px;border-left-width:4px}.bcard .capa-pop small{font-size:.45rem}.bcard .capa-pop span{font-size:.72rem}.bcard .capa-pop i{font-size:1.1rem;margin-top:6px}
@@ -468,10 +467,10 @@ body.com-ancora .sem-ancora{display:none!important}
   .hero p{margin:10px 0 16px;font-size:.95rem}
   .hero .btn{padding:15px 20px}
   .topo{display:flex;align-items:center;justify-content:center;gap:10px;padding:6px 10px}
-  .topo h4{margin:0;font-size:.78rem;line-height:1.15;text-align:left;max-width:92px}
+  .topo .topo-t{margin:0;font-size:.78rem;line-height:1.15;text-align:left;max-width:92px}
   .cd{gap:3px}
   .cd b{font-size:1.05rem;min-width:30px;padding:1px 4px;border-radius:5px}
-  .cd small{font-size:.42rem}
+  .cd small{font-size:.6rem}
   .cd i{font-size:.9rem;padding-bottom:3px}
 }
 
@@ -483,7 +482,7 @@ body.com-ancora .sem-ancora{display:none!important}
 .bw-selo i{font-style:normal;width:5px;height:5px;border-radius:50%;background:var(--amarelo)}
 .hero .bw-selo{margin-bottom:22px}
 .bonus-head .bw-selo{margin-bottom:16px}
-.topo h4 b{color:var(--amarelo)}
+.topo .topo-t b{color:var(--amarelo)}
 
 /* faixa correndo */
 .faixa{background:#000;color:#fff;overflow:hidden;border-top:2px solid var(--amarelo);border-bottom:2px solid var(--amarelo);position:relative;z-index:3}
@@ -509,6 +508,24 @@ body.com-ancora .sem-ancora{display:none!important}
 .card-foot .btn{background:#000;color:var(--amarelo);border:2px solid var(--amarelo)}
 .card-foot .btn:hover{background:var(--amarelo);color:#000}
 
+
+/* ===== AUDITORIA: autoridade, vídeo sob demanda, foco, pausa ===== */
+.autor-faixa{background:#fff;border-bottom:1px solid rgba(91,84,166,.12);padding:16px 0}
+.autor-faixa .wrap{display:flex;align-items:center;justify-content:center;gap:14px 18px;flex-wrap:wrap}
+.autor-faixa img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--amarelo)}
+.autor-faixa p{font-size:1.05rem;color:var(--tinta)}
+.autor-faixa ul{list-style:none;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.autor-faixa li{background:var(--lavanda);color:var(--roxo-esc);font-weight:700;font-size:.82rem;padding:6px 12px;border-radius:20px}
+@media(max-width:600px){.autor-faixa .wrap{gap:10px}.autor-faixa img{width:52px;height:52px}.autor-faixa p{font-size:.98rem}.autor-faixa li{font-size:.74rem;padding:5px 10px}}
+.yt{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;margin:0;cursor:pointer;background:#000;display:block}
+.yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .2s}
+.yt:hover img{opacity:1}
+.yt-play{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:12px;background:#e62117;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.yt-play:after{content:'';position:absolute;left:27px;top:14px;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;box-shadow:0 0 0 6px #000}
+.esteira,.faixa{cursor:pointer}
+.esteira.pausado .esteira-trilho,.faixa.pausado .faixa-trilho{animation-play-state:paused}
+
 /* ---------- Footer ---------- */
 footer{background:var(--escuro);color:#fff;text-align:center;padding:40px 20px;font-size:.84rem}
 footer img{height:100px;width:auto;margin:0 auto 14px}
@@ -521,12 +538,12 @@ footer a{color:var(--amarelo)}
 
 <!-- ================= CRONÔMETRO ================= -->
 <div class="topo" id="topo">
-  <h4 id="topoTxt"><b>BLACK WEEK</b> ENCERRA EM:</h4>
+  <p class="topo-t" id="topoTxt"><b>BLACK WEEK</b> ENCERRA EM:</p>
   <div class="cd" id="cd" aria-label="Tempo restante da Black Week">
     <div><small>Dias</small><b data-cd="d">00</b></div><i>:</i>
     <div><small>Horas</small><b data-cd="h">00</b></div><i>:</i>
-    <div><small>Minutos</small><b data-cd="m">00</b></div><i>:</i>
-    <div><small>Segundos</small><b data-cd="s">00</b></div>
+    <div><small>Min</small><b data-cd="m">00</b></div><i>:</i>
+    <div><small>Seg</small><b data-cd="s">00</b></div>
   </div>
 </div>
 
@@ -536,7 +553,7 @@ footer a{color:var(--amarelo)}
   <div class="hero-pessoa"></div>
   <div class="wrap">
     <div class="hero-top">
-      <img class="logo" src="img/logo-jpm.png" alt="Jogos Pedagógicos Musicais">
+      <img class="logo" src="img/logo-jpm.png" alt="Jogos Pedagógicos Musicais" decoding="async">
       <a class="btn-assinante" href="https://clientes.jogospedagogicosmusicais.com.br/login/">Sou assinante</a>
     </div>
     <div class="hero-grid">
@@ -544,16 +561,16 @@ footer a{color:var(--amarelo)}
       <span class="bw-selo"><b>Black Week</b><i></i>23 a 30/11</span>
       <div class="prof">
         <div class="av">
-          <img src="img/643e929045be05718ccadc409b644d5b.png" alt="">
-          <img src="img/c122290a2e8b80c3943cc436ed052eec.png" alt="">
-          <img src="img/b753f898c05ccd113d3e4adaaffd6b04.png" alt="">
-          <img src="img/614278fa7fe1ad9ed2255c7710ee17f7.png" alt="">
+          <img src="img/643e929045be05718ccadc409b644d5b.png" alt="" decoding="async">
+          <img src="img/c122290a2e8b80c3943cc436ed052eec.png" alt="" decoding="async">
+          <img src="img/b753f898c05ccd113d3e4adaaffd6b04.png" alt="" decoding="async">
+          <img src="img/614278fa7fe1ad9ed2255c7710ee17f7.png" alt="" decoding="async">
         </div>
         <span><b>+2500</b> professores</span>
       </div>
       <h1>Tenha mais alunos motivados e interessados em suas aulas de música com a melhor Plataforma de recursos pedagógicos criativos!</h1>
-      <p>Aproveite a Black Week e ganhe 6 bônus exclusivos.</p>
-      <a href="#planos" class="btn btn--amarelo">Assine agora</a>
+      <p>O segredo é escolher o jogo pelo que o seu aluno precisa praticar. Aproveite a Black Week e ganhe 6 bônus exclusivos.</p>
+      <a href="#planos" class="btn btn--amarelo">Quero os jogos + 6 bônus</a>
     </div>
     <!-- VÍDEO (VTurb) — só no computador.
          Quando o vídeo estiver na VTurb, apague o bloco "vsl-ph" abaixo e cole no lugar
@@ -567,6 +584,19 @@ footer a{color:var(--amarelo)}
 
 <!-- Faixa Black Week -->
 <div class="faixa" aria-hidden="true"><div class="faixa-trilho"><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span></div></div>
+
+<!-- ================= AUTORIDADE (curta, no topo — tráfego frio) ================= -->
+<section class="autor-faixa">
+  <div class="wrap">
+    <img src="img/bianca-avatar.jpg" alt="Prof. Bianca Ribeiro" width="64" height="64">
+    <p>Criado pela <b>Prof. Bianca Ribeiro</b></p>
+    <ul>
+      <li>Doutora em Música pela USP</li>
+      <li>+30 anos ensinando piano</li>
+      <li>+2.500 professores usam</li>
+    </ul>
+  </div>
+</section>
 
 <!-- ================= TUDO QUE TEM DENTRO ================= -->
 <section class="sec dentro" style="padding-bottom:0">
@@ -584,18 +614,18 @@ footer a{color:var(--amarelo)}
   <div class="basico">
     <div class="wrap"><div class="basico-card">
       <div>
-        <div class="chk"><img src="img/8e9c0c40521368beb4ab682d748bc58b.svg" alt=""><h3>Do básico<br>ao avançado</h3></div>
+        <div class="chk"><img src="img/8e9c0c40521368beb4ab682d748bc58b.svg" alt="" loading="lazy" decoding="async"><h3>Do básico<br>ao avançado</h3></div>
         <p>Teoria, prática, exercícios, diversos instrumentos. Tudo reunido em um só lugar.</p>
-        <a href="#planos" class="btn btn--claro">Assine agora</a>
+        <a href="#planos" class="btn btn--claro">Quero acessar a plataforma</a>
       </div>
-      <div class="mock"><img src="img/e91164afc1c5ac3bf751c6c3c6915579.webp" alt="Plataforma em computador, notebook, tablet e celular"></div>
+      <div class="mock"><img src="img/e91164afc1c5ac3bf751c6c3c6915579.webp" alt="Plataforma em computador, notebook, tablet e celular" loading="lazy" decoding="async"></div>
     </div>
     </div>
   </div>
   <div class="esteira" aria-label="Alguns dos jogos da plataforma">
     <div class="esteira-trilho" id="trilhoJogos"></div>
   </div>
-  <div class="cta" style="padding-bottom:64px"><a href="#planos" class="btn btn--claro">Assine agora</a></div>
+  <div class="cta" style="padding-bottom:64px"><a href="#planos" class="btn btn--claro">Quero ter todos esses jogos</a></div>
 </section>
 
 <!-- ================= O QUE VEM COM A PLATAFORMA (briefing) ================= -->
@@ -615,7 +645,7 @@ footer a{color:var(--amarelo)}
         <p><b>Use</b> mais de 40 jogos, materiais em PDF, a Tarefa de Casa e a assistente Bia Criativa nas suas aulas online e presenciais.</p>
         <p class="ref ancora">Valor da plataforma: <s>R$1.347</s></p>
       </div>
-      <div class="stage"><img src="img/e91164afc1c5ac3bf751c6c3c6915579.webp" alt="Plataforma Jogos Pedagógicos Musicais"></div>
+      <div class="stage"><img src="img/e91164afc1c5ac3bf751c6c3c6915579.webp" alt="Plataforma Jogos Pedagógicos Musicais" loading="lazy" decoding="async"></div>
     </div>
 
     <div class="bgrid">
@@ -644,7 +674,7 @@ footer a{color:var(--amarelo)}
         </div>
       </div>
       <div class="bcard">
-        <div class="stage"><span class="selo-num">Bônus 4</span><img class="capa" src="img/bonus-guia-cifras.png" alt="Guia das Cifras" loading="lazy"></div>
+        <div class="stage"><span class="selo-num">Bônus 4</span><img class="capa" src="img/bonus-guia-cifras.jpg" alt="Guia das Cifras" loading="lazy"></div>
         <div class="bbody">
           <h3>Guia de Cifras</h3>
           <p class="uso"><b>Consulte</b> a notação de acordes ao preparar a aula.</p>
@@ -652,7 +682,7 @@ footer a{color:var(--amarelo)}
         </div>
       </div>
       <div class="bcard">
-        <div class="stage"><span class="selo-num">Bônus 5</span><img class="capa" src="img/bonus-kit50.png" alt="Kit 50 Acompanhamentos" loading="lazy"></div>
+        <div class="stage"><span class="selo-num">Bônus 5</span><img class="capa" src="img/bonus-kit50.jpg" alt="Kit 50 Acompanhamentos" loading="lazy"></div>
         <div class="bbody">
           <h3>Kit 50 Acompanhamentos</h3>
           <p class="uso"><b>Tenha</b> bases para variar as atividades e a prática no piano.</p>
@@ -674,7 +704,7 @@ footer a{color:var(--amarelo)}
       <b>Economize R$2.050 nesta Black Week</b>
     </div>
 
-    <div class="cta"><a href="#planos" class="btn btn--amarelo">Assine agora</a></div>
+    <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero a plataforma + 6 bônus</a></div>
   </div>
 </section>
 
@@ -711,7 +741,7 @@ footer a{color:var(--amarelo)}
 <section class="sec bia" id="secBia">
   <div class="wrap">
     <div class="bia-box">
-      <img src="img/d64d971b2eda17cfada44ff13d95a0e0.png" alt="Bia Criativa">
+      <img src="img/d64d971b2eda17cfada44ff13d95a0e0.png" alt="Bia Criativa" loading="lazy" decoding="async">
       <div class="t">
         <h2>Assistente IA Bia Criativa</h2>
         <p>A Bia Criativa é uma assistente de inteligência artificial que entende o universo musical e educacional.</p>
@@ -725,6 +755,43 @@ footer a{color:var(--amarelo)}
       <img src="img/09567fb56c0999841175d6177e90f299.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
       <img src="img/2dd50bb8b3133dd9b16f5451c47445cf.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
     </div>
+  </div>
+</section>
+
+<!-- ================= SATISFAÇÃO ================= -->
+<section class="sec satisf">
+  <div class="center" style="padding:0 20px">
+    <img class="stars" src="img/ca5db17f2c83a402508be134121bc101.jpg" alt="5 estrelas" loading="lazy" decoding="async">
+    <h2 class="titulo">Alto grau de satisfação dos professores</h2>
+  </div>
+  <div class="wrap center">
+    <h3 class="sub-dep">Confira os resultados de alguns professores!</h3>
+    <div class="videos">
+      <div class="video"><button type="button" class="yt" data-yt="HE5lUtvxgTQ" aria-label="Assistir ao vídeo: Depoimento Prof. João"><img src="https://i.ytimg.com/vi/HE5lUtvxgTQ/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="Tlg758AaEgE" aria-label="Assistir ao vídeo: Depoimento Prof. Cíntya"><img src="https://i.ytimg.com/vi/Tlg758AaEgE/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="uIV85FliII8" aria-label="Assistir ao vídeo: Depoimento Prof. Rodolfo"><img src="https://i.ytimg.com/vi/uIV85FliII8/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="ZQ_20RyiqVo" aria-label="Assistir ao vídeo: Depoimento Prof. Lívia"><img src="https://i.ytimg.com/vi/ZQ_20RyiqVo/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="6GIzDHkG67Y" aria-label="Assistir ao vídeo: Depoimento Prof. Glaucimelo"><img src="https://i.ytimg.com/vi/6GIzDHkG67Y/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="qlIq-QiFp3o" aria-label="Assistir ao vídeo: Depoimento Prof. Cláudia"><img src="https://i.ytimg.com/vi/qlIq-QiFp3o/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+    </div>
+    <h3 class="sub-dep">Mensagens de quem usa</h3>
+  </div>
+  <div class="carrossel">
+    <button class="seta prev" aria-label="Anterior">‹</button>
+    <div class="trilho">
+      <div class="print"><img src="img/c82815f8ac12fd31de2aca1f45ddbeac.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/655849a9c7be408abe1c095bb1ba1c7b.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/9902e593e52fe338a248ab7e809679d2.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/d1a7d9013dc7589ac40d166b722566dc.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/2f5ba23808f29f0df73ad0e9aca46eae.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/0edfc86ed8cb581a619dccf0763b0dfd.jpg" alt="Mensagem de professora" loading="lazy"></div>
+    </div>
+    <button class="seta next" aria-label="Próximo">›</button>
+  </div>
+  <p class="passe">Passe para o lado</p>
+  <div class="wrap">
+    <div class="video"><button type="button" class="yt" data-yt="Ns8EooNB8zg" aria-label="Assistir ao vídeo: O que dizem os professores"><img src="https://i.ytimg.com/vi/Ns8EooNB8zg/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+    <div class="cta"><a href="#planos" class="btn btn--claro">Quero esse resultado nas minhas aulas</a></div>
   </div>
 </section>
 
@@ -776,40 +843,16 @@ footer a{color:var(--amarelo)}
   </div>
 </section>
 
-<!-- ================= SATISFAÇÃO ================= -->
-<section class="sec satisf">
-  <div class="center" style="padding:0 20px">
-    <img class="stars" src="img/ca5db17f2c83a402508be134121bc101.jpg" alt="5 estrelas">
-    <h2 class="titulo">Alto grau de satisfação dos professores</h2>
-  </div>
-  <div class="wrap center">
-    <h3 class="sub-dep">Confira os resultados de alguns professores!</h3>
-    <div class="videos">
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/HE5lUtvxgTQ?rel=0&playsinline=1" loading="lazy" allowfullscreen title="Depoimento Prof. João"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Tlg758AaEgE?rel=0&playsinline=1" loading="lazy" allowfullscreen title="Depoimento Prof. Cíntya"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/uIV85FliII8?rel=0&playsinline=1" loading="lazy" allowfullscreen title="Depoimento Prof. Rodolfo"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ZQ_20RyiqVo?rel=0&playsinline=1" loading="lazy" allowfullscreen title="Depoimento Prof. Lívia"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/6GIzDHkG67Y?rel=0&playsinline=1" loading="lazy" allowfullscreen title="Depoimento Prof. Glaucimelo"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/qlIq-QiFp3o?rel=0&playsinline=1" loading="lazy" allowfullscreen title="Depoimento Prof. Cláudia"></iframe></div>
-    </div>
-    <h3 class="sub-dep">Mensagens de quem usa</h3>
-  </div>
-  <div class="carrossel">
-    <button class="seta prev" aria-label="Anterior">‹</button>
-    <div class="trilho">
-      <div class="print"><img src="img/c82815f8ac12fd31de2aca1f45ddbeac.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/655849a9c7be408abe1c095bb1ba1c7b.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/9902e593e52fe338a248ab7e809679d2.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/d1a7d9013dc7589ac40d166b722566dc.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/2f5ba23808f29f0df73ad0e9aca46eae.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/0edfc86ed8cb581a619dccf0763b0dfd.jpg" alt="Mensagem de professora" loading="lazy"></div>
-    </div>
-    <button class="seta next" aria-label="Próximo">›</button>
-  </div>
-  <p class="passe">Passe para o lado</p>
+<!-- ================= GARANTIA ================= -->
+<section class="sec garantia">
   <div class="wrap">
-    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Ns8EooNB8zg?rel=0&playsinline=1" loading="lazy" allowfullscreen title="O que dizem os professores"></iframe></div>
-    <div class="cta"><a href="#planos" class="btn btn--claro">Quero aulas criativas</a></div>
+    <img src="img/4212bff4e1103c709fe18c70b78f4244.webp" alt="Selo 7 dias de garantia" loading="lazy">
+    <div>
+      <h2>Você tem minha Garantia Exclusiva</h2>
+      <h3>7 dias de garantia incondicional</h3>
+      <p>Se você assinar a Plataforma Jogos Pedagógicos Musicais e no prazo de até 7 dias achar que a plataforma não é para você, eu te devolverei cada centavo pago, eu mesmo reembolso 100% você, sem complicações e sem perguntas. Simples e sem burocracia!</p>
+      <a href="#planos" class="btn btn--claro">Quero testar por 7 dias</a>
+    </div>
   </div>
 </section>
 
@@ -819,12 +862,12 @@ footer a{color:var(--amarelo)}
     <h2 class="titulo">Por que a Plataforma Jogos Pedagógicos Musicais é tão completa?</h2>
     <p class="lead">Conheça alguns benefícios da Plataforma.</p>
     <div class="benef">
-      <div><div class="ic"><img src="img/24643ebd578cba217cbd3d9c163cde72.webp" alt=""></div><h3>Tempo</h3><p>Aqui na Plataforma o seu tempo é precioso. Você não precisa planejar e criar materiais por conta própria. Já deixei tudo pronto para você usar em suas aulas.</p></div>
-      <div><div class="ic"><img src="img/fa2b85b53a8b6f8e8507cf83f6f8069d.webp" alt=""></div><h3>Praticidade</h3><p>Os materiais e jogos pedagógicos podem ser acessados em diversos dispositivos, tais como: celulares, tablets, computador, TV, nas aulas online e presenciais.</p></div>
-      <div><div class="ic"><img src="img/df22a115a932c47fbfaf60436622c67b.webp" alt=""></div><h3>Passo a passo</h3><p>Em cada jogo pedagógico eu criei um passo a passo, onde você consegue aproveitar ao máximo todos os recursos para tornar suas aulas mais criativas e cheias de vida.</p></div>
-      <div><div class="ic"><img src="img/b2e7513362bf8b8e5a3ac6882bdf5397.webp" alt=""></div><h3>Inovação</h3><p>Você tem em uma única plataforma todos recursos pedagógicos necessários prontinhos para suas aulas de música: jogos, materiais em PDF, VÍDEO AULAS e muito mais.</p></div>
-      <div><div class="ic"><img src="img/6411b272897a65aba860b57a4dafae05.webp" alt="" style="border-radius:50%"></div><h3>Tarefa de casa</h3><p>Além de todos os recursos, você pode cadastrar seus alunos e compartilhar os jogos pedagógicos que escolher para eles fazerem em casa.</p></div>
-      <div><div class="ic"><img src="img/51089d4fd114457918766126087d3479.webp" alt=""></div><h3>Suporte VIP</h3><p>Eu não te deixo na mão! Assim que você assinar a plataforma Jogos Pedagógicos Musicais você terá meu whats particular para tirar suas dúvidas e saber das novidades.</p></div>
+      <div><div class="ic"><img src="img/24643ebd578cba217cbd3d9c163cde72.webp" alt="" loading="lazy" decoding="async"></div><h3>Tempo</h3><p>Aqui na Plataforma o seu tempo é precioso. Você não precisa planejar e criar materiais por conta própria. Já deixei tudo pronto para você usar em suas aulas.</p></div>
+      <div><div class="ic"><img src="img/fa2b85b53a8b6f8e8507cf83f6f8069d.webp" alt="" loading="lazy" decoding="async"></div><h3>Praticidade</h3><p>Os materiais e jogos pedagógicos podem ser acessados em diversos dispositivos, tais como: celulares, tablets, computador, TV, nas aulas online e presenciais.</p></div>
+      <div><div class="ic"><img src="img/df22a115a932c47fbfaf60436622c67b.webp" alt="" loading="lazy" decoding="async"></div><h3>Passo a passo</h3><p>Em cada jogo pedagógico eu criei um passo a passo, onde você consegue aproveitar ao máximo todos os recursos para tornar suas aulas mais criativas e cheias de vida.</p></div>
+      <div><div class="ic"><img src="img/b2e7513362bf8b8e5a3ac6882bdf5397.webp" alt="" loading="lazy" decoding="async"></div><h3>Inovação</h3><p>Você tem em uma única plataforma todos recursos pedagógicos necessários prontinhos para suas aulas de música: jogos, materiais em PDF, VÍDEO AULAS e muito mais.</p></div>
+      <div><div class="ic"><img src="img/6411b272897a65aba860b57a4dafae05.webp" alt="" style="border-radius:50%" loading="lazy" decoding="async"></div><h3>Tarefa de casa</h3><p>Além de todos os recursos, você pode cadastrar seus alunos e compartilhar os jogos pedagógicos que escolher para eles fazerem em casa.</p></div>
+      <div><div class="ic"><img src="img/51089d4fd114457918766126087d3479.webp" alt="" loading="lazy" decoding="async"></div><h3>Suporte VIP</h3><p>Eu não te deixo na mão! Assim que você assinar a plataforma Jogos Pedagógicos Musicais você terá meu whats particular para tirar suas dúvidas e saber das novidades.</p></div>
     </div>
     <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero aulas criativas</a></div>
   </div>
@@ -865,9 +908,9 @@ footer a{color:var(--amarelo)}
       <h2>Como é a Plataforma por dentro?</h2>
       <p>Com metologia inovadora e validada, os jogos pedagógicos foram feitos para quem quer dar aulas online e presenciais mais criativas e cheias de recursos, sem precisar ficar tentando criar materiais por conta própria.</p>
       <p>Com conteúdo programático planejado, a plataforma Jogos Pedagógicos Musicais vai simplificar o seu dia a dia no ensino da música para seus alunos. Para facilitar ainda mais o aprendizado, os jogos pedagógicos desenvolvidos possuem um tutorial com um passo a passo e objetivos pedagógicos descritos para você e seu aluno aproveitarem ao máximo todos os recursos.</p>
-      <a href="#planos" class="btn btn--amarelo">Quero aulas criativas</a>
+      <a href="#planos" class="btn btn--amarelo">Quero usar a plataforma nas aulas</a>
     </div>
-    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/B-aXqzgaHKE?rel=0&playsinline=1" loading="lazy" allowfullscreen title="Conheça a plataforma por dentro"></iframe></div>
+    <div class="video"><button type="button" class="yt" data-yt="B-aXqzgaHKE" aria-label="Assistir ao vídeo: Conheça a plataforma por dentro"><img src="https://i.ytimg.com/vi/B-aXqzgaHKE/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
   </div>
 </section>
 
@@ -875,7 +918,7 @@ footer a{color:var(--amarelo)}
 <section class="sec suporte">
   <div class="wrap">
     <div class="sup-top">
-      <div class="ic"><img src="img/e0bf06b5ecbbfe15b20be8b50be5db59.svg" alt=""></div>
+      <div class="ic"><img src="img/e0bf06b5ecbbfe15b20be8b50be5db59.svg" alt="" loading="lazy" decoding="async"></div>
       <div>
         <h2>Aqui você tem o melhor suporte do Brasil.</h2>
         <p class="it">Eu faço questão de pegar na sua mão e te ajudar em cada momento.</p>
@@ -889,7 +932,7 @@ footer a{color:var(--amarelo)}
       <img src="img/493daa1064b060635e69005fde380579.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
       <img src="img/ef0970ed84c2c54ee1115245d7aecf38.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
     </div>
-    <div class="cta"><a href="#planos" class="btn btn--amarelo">Assine agora</a></div>
+    <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero o suporte VIP da Bianca</a></div>
   </div>
 </section>
 
@@ -905,19 +948,6 @@ footer a{color:var(--amarelo)}
   </div>
 </section>
 
-<!-- ================= GARANTIA ================= -->
-<section class="sec garantia">
-  <div class="wrap">
-    <img src="img/4212bff4e1103c709fe18c70b78f4244.webp" alt="Selo 7 dias de garantia" loading="lazy">
-    <div>
-      <h2>Você tem minha Garantia Exclusiva</h2>
-      <h3>7 dias de garantia incondicional</h3>
-      <p>Se você assinar a Plataforma Jogos Pedagógicos Musicais e no prazo de até 7 dias achar que a plataforma não é para você, eu te devolverei cada centavo pago, eu mesmo reembolso 100% você, sem complicações e sem perguntas. Simples e sem burocracia!</p>
-      <a href="#planos" class="btn btn--claro">Quero testar por 7 dias</a>
-    </div>
-  </div>
-</section>
-
 <!-- ================= FAQ ================= -->
 <section class="sec faq">
   <div class="wrap center">
@@ -928,7 +958,7 @@ footer a{color:var(--amarelo)}
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Como os jogos estimulam o aprendizado dentro da aula de música?</button><div class="faq-a"><p>A interação criada pelo jogo motiva o aluno a aprender para vencer o desafio. A recompensa, a pontuação, o grau de dificuldade… tudo isso estimula o cérebro do aluno a criar conexões para resolver o problema, aprendendo muito mais rápido, de maneira leve e divertida. E muitas vezes, até nós professores, nos divertimos junto.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Posso usar os jogos nas aulas presenciais?</button><div class="faq-a"><p>Siim! Inclusive o resultado é incrível. Muitos professores gostam de usar os jogos direto no notebook com o aluno em frente e até mesmo em TVs e monitores maiores.<br>Além disso, muitos materiais estão disponíveis também em PDF, onde é possível imprimir e trabalhar na aula presencial.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Eu posso usar os jogos no tablet?</button><div class="faq-a"><p>Sim sim, os jogos foram criados para usar nos tablets e notebook, inclusive muitos professores usam no celular. Mas eu recomendo usar em telas maiores.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Por quanto tempo terei esses jogos?</button><div class="faq-a"><p>Você tem acesso aos material enquanto estiver assinando a Plataforma Jogos Pedagógicos Musicais.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Por quanto tempo terei esses jogos?</button><div class="faq-a"><p>Você tem acesso a todo o material durante os 12 meses do Plano Anual VIP.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Como vou receber os jogos pedagógicos?</button><div class="faq-a"><p>Assim que assinar a plataforma, você irá receber um email automático com os dados de acesso e uma mensagem no seu Whats com o link de acesso. Basta seguir as instruções e acessar os materiais.<br>Se tiver com alguma dúvida, me chame no whats que você receberá assim que assinar.</p></div></div>
     </div>
     <div class="duvidas">
@@ -941,7 +971,7 @@ footer a{color:var(--amarelo)}
 
 <!-- ================= RODAPÉ ================= -->
 <footer>
-  <img src="img/f778767a3ac3d7083980296dba0fa0b7.webp" alt="Bianca Ribeiro">
+  <img src="img/f778767a3ac3d7083980296dba0fa0b7.webp" alt="Bianca Ribeiro" loading="lazy" decoding="async">
   <p class="slogan">Aulas de música mais criativas e organizadas.</p>
   <p class="end">Este conteúdo é disponibilizado pela Bianca Ribeiro. Endereço rua Etelvina Pedroso de Gouvea, São Paulo, SP 05590-160.</p>
   <p class="end" style="margin-top:6px"><a href="https://biancaribeiro.art.br/politica-de-privacidade/">Política de Privacidade, Termos e Condições</a></p>
@@ -983,6 +1013,38 @@ footer a{color:var(--amarelo)}
     return true;
   }
   if (tick()) { var iv = setInterval(function(){ if(!tick()) clearInterval(iv); }, 1000); }
+
+
+  /* Vídeos do YouTube: só carrega o player quando a pessoa clica */
+  document.querySelectorAll('.yt').forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.yt + '?autoplay=1&rel=0&playsinline=1';
+      f.title = b.getAttribute('aria-label');
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      b.replaceWith(f);
+    });
+  });
+
+  /* Esteira e faixa: toque/clique pausa e retoma */
+  document.querySelectorAll('.esteira,.faixa').forEach(function(el){
+    el.addEventListener('click', function(){ el.classList.toggle('pausado'); });
+  });
+
+  /* Rastreamento extra: WhatsApp (Contact) e início de checkout no Google Ads */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a'); if (!a) return;
+    var h = a.getAttribute('href') || '';
+    try {
+      if (h.indexOf('api.whatsapp.com') > -1) {
+        if (window.fbq) fbq('track', 'Contact');
+        if (window.gtag) gtag('event', 'contact', {method: 'whatsapp'});
+      } else if (h.indexOf('pay.hotmart.com') > -1) {
+        if (window.gtag) gtag('event', 'begin_checkout', {value: 597, currency: 'BRL'});
+      }
+    } catch(_) {}
+  }, true);
 
   /* Carrosséis */
   document.querySelectorAll('.carrossel').forEach(function(c){

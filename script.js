@@ -138,7 +138,7 @@
     enrichHref(a);
     try {
       if (window.fbq) {
-        window.fbq('track', 'InitiateCheckout', Object.assign({}, CONTENT, UTMS, CLICK_IDS));
+        window.fbq('track', 'InitiateCheckout', Object.assign({ value: 597, currency: 'BRL' }, CONTENT, UTMS, CLICK_IDS));
       }
     } catch (_) {}
   }, true);
