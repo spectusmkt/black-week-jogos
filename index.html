@@ -544,6 +544,35 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-of
 .card-cd{display:block;text-align:center;white-space:nowrap;background:#000;color:#fff;border-radius:10px;padding:8px 10px;margin:0 0 14px;font-size:.82rem;font-weight:700}
 .card-cd b{color:var(--amarelo);font-variant-numeric:tabular-nums;font-size:1rem}
 
+
+/* ===== Desktop mais largo (só telas grandes; celular não muda) ===== */
+@media(min-width:1100px){
+  .wrap{max-width:1240px;padding:0 32px}
+  .hero-txt{max-width:580px}
+  .hero h1{font-size:2.35rem}
+  .hero-grid{grid-template-columns:1fr 1.15fr;gap:56px}
+  .dentro h2{max-width:780px}
+  .pilulas{max-width:1080px}
+  .basico-card{padding:30px 48px}
+  .basico .mock img{max-height:300px}
+  .bonus-head p{max-width:640px}
+  .bgrid{gap:26px}
+  .bia-box,.bia-prints{max-width:1060px}
+  .satisf h2{max-width:none}
+  .satisf .video{max-width:900px}
+  .videos{grid-template-columns:repeat(3,1fr);gap:24px}
+  .certo h2{max-width:1040px}
+  .faq-list{max-width:980px}
+  .valor-grid{gap:22px}
+  .vcard{padding:28px 24px}
+  /* card da oferta em duas colunas: itens à esquerda, preço e botão à direita */
+  .card{max-width:980px;display:grid;grid-template-columns:1.25fr 1fr;align-items:start}
+  .card .card-head{grid-column:1/-1}
+  .card ul,.card .grp{grid-column:1}
+  .card-foot{grid-column:2;grid-row:2/span 3;align-self:center;border-top:none!important;border-left:1px dashed rgba(91,84,166,.25);margin:0!important;padding:28px 34px!important}
+  .card ul:last-of-type{padding-bottom:26px}
+}
+
 /* ---------- Footer ---------- */
 footer{background:var(--escuro);color:#fff;text-align:center;padding:40px 20px;font-size:.84rem}
 footer img{height:100px;width:auto;margin:0 auto 14px}
