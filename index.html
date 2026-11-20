@@ -120,8 +120,8 @@ h1,h2,h3{line-height:1.2}
 .cta{margin-top:36px;text-align:center}
 
 /* ---------- Cronômetro (topo) ---------- */
-.topo{background:#000;color:#fff;text-align:center;padding:10px 12px 12px;position:sticky;top:0;z-index:50}
-.topo .topo-t{font-size:1.15rem;font-weight:700;letter-spacing:.3px;margin-bottom:6px}
+.topo{background:#000;color:#fff;text-align:center;padding:8px 12px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:18px}
+.topo .topo-t{font-size:1.05rem;font-weight:900;letter-spacing:.3px;margin:0;line-height:1.15;text-align:left;max-width:130px}
 .cd{display:inline-flex;align-items:flex-end;gap:6px}
 .cd div{display:flex;flex-direction:column;align-items:center;gap:3px}
 .cd small{font-size:.55rem;text-transform:uppercase;color:rgba(255,255,255,.75)}
@@ -486,7 +486,7 @@ body.com-ancora .sem-ancora{display:none!important}
   .hero p{margin:10px 0 16px;font-size:.95rem}
   .hero .btn{padding:15px 20px}
   .topo{display:flex;align-items:center;justify-content:center;gap:10px;padding:6px 10px}
-  .topo .topo-t{margin:0;font-size:.78rem;line-height:1.15;text-align:left;max-width:92px}
+  .topo .topo-t{margin:0;font-size:.78rem;line-height:1.15;text-align:left;max-width:110px}
   .cd{gap:3px}
   .cd b{font-size:1.05rem;min-width:30px;padding:1px 4px;border-radius:5px}
   .cd small{font-size:.6rem}
@@ -591,6 +591,36 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-of
   .card-foot{grid-column:2;grid-row:2/span 3;align-self:center;border-top:none!important;border-left:1px dashed rgba(91,84,166,.25);margin:0!important;padding:28px 34px!important}
   .card ul:last-of-type{padding-bottom:26px}
 }
+
+
+/* ===== Ancoragem em formato de recibo ===== */
+.ancoragem{background:radial-gradient(ellipse at 50% 0%,rgba(91,84,166,.14),transparent 60%),#FBFAFE}
+.ancoragem .bw-selo{margin-bottom:16px}
+.recibo{position:relative;max-width:640px;margin:34px auto 0;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 26px 60px rgba(45,38,90,.16);text-align:left;padding:30px 34px 0}
+.recibo-itens{list-style:none}
+.recibo-itens li{display:flex;align-items:flex-end;gap:10px;padding:11px 0}
+.ri-n b{display:block;font-size:1rem;color:var(--tinta)}
+.ri-n small{font-size:.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--turquesa)}
+.recibo-itens li:first-child .ri-n small{color:var(--roxo)}
+.recibo-itens i{flex:1;border-bottom:2px dotted rgba(91,84,166,.3);margin-bottom:6px;min-width:20px}
+.ri-v{font-weight:700;color:var(--cinza);white-space:nowrap;font-variant-numeric:tabular-nums}
+.recibo-total{display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--tinta);margin-top:8px;padding:16px 0 22px;font-weight:700;font-size:1.1rem}
+.recibo-total s{color:#d14b4b;font-size:1.5rem;text-decoration-thickness:3px}
+.recibo-bw{margin:0 -34px;background:#000;color:#fff;text-align:center;padding:26px 24px 30px;border-top:3px solid var(--amarelo)}
+.rb-tag{display:inline-block;color:var(--amarelo);font-weight:900;font-size:.82rem;letter-spacing:2px;text-transform:uppercase}
+.rb-parc{font-size:3.2rem;font-weight:900;letter-spacing:-1px;line-height:1.05;margin-top:8px}
+.rb-parc small{font-size:1.1rem;font-weight:700;letter-spacing:0;vertical-align:middle;margin-right:4px}
+.rb-vista{color:rgba(255,255,255,.75);margin-top:4px}
+.rb-vista b{color:#fff}
+.rb-eco{display:inline-block;margin-top:16px;background:var(--amarelo);color:#000;font-weight:900;padding:8px 20px;border-radius:30px}
+@media(max-width:600px){
+  .recibo{padding:22px 18px 0;margin-top:26px}
+  .recibo-bw{margin:0 -18px}
+  .ri-n b{font-size:.9rem}.ri-n small{font-size:.66rem}
+  .ri-v{font-size:.9rem}
+  .rb-parc{font-size:2.4rem}
+}
+.card-foot .parc-lbl{color:var(--cinza);font-size:.95rem;font-weight:500}
 
 /* ---------- Footer ---------- */
 footer{background:var(--escuro);color:#fff;text-align:center;padding:40px 20px;font-size:.84rem}
@@ -881,12 +911,35 @@ footer a{color:var(--amarelo)}
       </div>
     </div>
 
-    <div class="soma ancora">
-      <span>Tudo somado: <s>R$2.647</s> · na Black Week: <b>12x de R$<span data-parcela>59,94</span></b> ou <b>R$597 à vista</b></span>
-      <b>Economize R$2.050 nesta Black Week</b>
-    </div>
 
     <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero a plataforma + 6 bônus</a></div>
+  </div>
+</section>
+
+<!-- ================= ANCORAGEM (recibo) ================= -->
+<section class="sec ancoragem ancora" id="valor-total">
+  <div class="wrap center">
+    <span class="bw-selo"><b>Black Week</b><i></i>tudo o que você leva</span>
+    <h2 class="titulo">Quanto valeria tudo isso separado?</h2>
+    <div class="recibo">
+      <ul class="recibo-itens">
+        <li><span class="ri-n"><b>Plataforma Jogos Pedagógicos Musicais</b><small>12 meses de acesso</small></span><i></i><span class="ri-v">R$1.347</span></li>
+        <li><span class="ri-n"><b>Curso AMO — Aulas de Música Online</b><small>Bônus 1</small></span><i></i><span class="ri-v">R$350</span></li>
+        <li><span class="ri-n"><b>Masterclass Seguidores em Alunos</b><small>Bônus 2</small></span><i></i><span class="ri-v">R$297</span></li>
+        <li><span class="ri-n"><b>Oficina Professor Criativo + materiais</b><small>Bônus 3</small></span><i></i><span class="ri-v">R$298</span></li>
+        <li><span class="ri-n"><b>Guia de Cifras</b><small>Bônus 4</small></span><i></i><span class="ri-v">R$90</span></li>
+        <li><span class="ri-n"><b>Kit 50 Acompanhamentos</b><small>Bônus 5</small></span><i></i><span class="ri-v">R$67</span></li>
+        <li><span class="ri-n"><b>Pack de Partituras Pop</b><small>Bônus 6</small></span><i></i><span class="ri-v">R$198</span></li>
+      </ul>
+      <div class="recibo-total"><span>Valor total</span><s>R$2.647</s></div>
+      <div class="recibo-bw">
+        <span class="rb-tag">Na Black Week, tudo por</span>
+        <p class="rb-parc"><small>12x de</small> R$<span data-parcela>59,94</span></p>
+        <p class="rb-vista">ou <b>R$597</b> à vista</p>
+        <span class="rb-eco">Você economiza R$2.050</span>
+      </div>
+    </div>
+    <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero garantir esse valor</a></div>
   </div>
 </section>
 
@@ -927,10 +980,9 @@ footer a{color:var(--amarelo)}
         <li class="b">Pack de Partituras Pop</li>
       </ul>
       <div class="card-foot">
-        <p class="de ancora">De <s>R$2.647</s> por apenas</p>
+        <p class="parc-lbl">Plano Anual VIP + 6 bônus por</p>
         <p class="parc"><small>12x de</small><b>R$<span data-parcela>59,94</span></b></p>
         <p class="vista">ou <b>R$597</b> à vista</p>
-        <span class="eco ancora">Economize R$2.050 nesta Black Week</span>
         <p class="card-cd" id="cardCd">⏳ Termina em <b data-cd2="d">00</b>d <b data-cd2="h">00</b>h <b data-cd2="m">00</b>m <b data-cd2="s">00</b>s</p>
         <a href="#planos" data-checkout class="btn btn--escuro">Quero aproveitar a Black Week!</a>
         <p class="seg">Compra segura via Hotmart · 7 dias de garantia</p>
