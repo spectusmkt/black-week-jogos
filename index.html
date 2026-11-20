@@ -526,6 +526,24 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-of
 .esteira,.faixa{cursor:pointer}
 .esteira.pausado .esteira-trilho,.faixa.pausado .faixa-trilho{animation-play-state:paused}
 
+
+/* ===== Bloco de valor ===== */
+.valor{background:linear-gradient(180deg,#fff,#F4F2F8)}
+.valor .bw-selo{margin-bottom:16px}
+.valor-sub{color:var(--cinza);font-size:1.08rem;margin-top:6px}
+.valor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px;text-align:left}
+.vcard{background:#fff;border:1px solid rgba(91,84,166,.14);border-radius:18px;padding:24px 20px;box-shadow:0 12px 30px rgba(45,38,90,.08)}
+.vnum{display:block;font-size:2.2rem;font-weight:900;letter-spacing:-1px;color:var(--roxo);line-height:1}
+.vcard h3{font-size:1.02rem;margin:6px 0 10px;color:var(--tinta)}
+.vcard p{font-size:.9rem;color:var(--cinza)}
+.vcard--g{background:#000;color:#fff;border-color:var(--amarelo)}
+.vcard--g .vnum{color:var(--amarelo)}.vcard--g h3{color:#fff}.vcard--g p{color:rgba(255,255,255,.8)}
+@media(max-width:900px){.valor-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.valor-grid{grid-template-columns:1fr;gap:12px}.vcard{display:grid;grid-template-columns:auto 1fr;gap:0 14px;align-items:center;padding:18px}.vnum{font-size:1.6rem;grid-row:span 2;min-width:92px}.vcard h3{margin:0 0 4px}.vcard p{grid-column:2}}
+/* ===== Cronômetro dentro do card da oferta ===== */
+.card-cd{display:block;text-align:center;white-space:nowrap;background:#000;color:#fff;border-radius:10px;padding:8px 10px;margin:0 0 14px;font-size:.82rem;font-weight:700}
+.card-cd b{color:var(--amarelo);font-variant-numeric:tabular-nums;font-size:1rem}
+
 /* ---------- Footer ---------- */
 footer{background:var(--escuro);color:#fff;text-align:center;padding:40px 20px;font-size:.84rem}
 footer img{height:100px;width:auto;margin:0 auto 14px}
@@ -628,6 +646,122 @@ footer a{color:var(--amarelo)}
   <div class="cta" style="padding-bottom:64px"><a href="#planos" class="btn btn--claro">Quero ter todos esses jogos</a></div>
 </section>
 
+<!-- ================= POR DENTRO ================= -->
+<section class="sec dentro2">
+  <div class="wrap">
+    <div>
+      <h2>Como é a Plataforma por dentro?</h2>
+      <p>Com metologia inovadora e validada, os jogos pedagógicos foram feitos para quem quer dar aulas online e presenciais mais criativas e cheias de recursos, sem precisar ficar tentando criar materiais por conta própria.</p>
+      <p>Com conteúdo programático planejado, a plataforma Jogos Pedagógicos Musicais vai simplificar o seu dia a dia no ensino da música para seus alunos. Para facilitar ainda mais o aprendizado, os jogos pedagógicos desenvolvidos possuem um tutorial com um passo a passo e objetivos pedagógicos descritos para você e seu aluno aproveitarem ao máximo todos os recursos.</p>
+      <a href="#planos" class="btn btn--amarelo">Quero usar a plataforma nas aulas</a>
+    </div>
+    <div class="video"><button type="button" class="yt" data-yt="B-aXqzgaHKE" aria-label="Assistir ao vídeo: Conheça a plataforma por dentro"><img src="https://i.ytimg.com/vi/B-aXqzgaHKE/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+  </div>
+</section>
+
+<!-- ================= TAREFA DE CASA (passo a passo) ================= -->
+<section class="sec tarefa" id="tarefa">
+  <div class="wrap">
+    <div class="tc-topo">
+      <div>
+        <span class="tc-selo">🏠 Funcionalidade exclusiva</span>
+        <h2>Seus alunos não estudam e nem praticam em casa?</h2>
+        <h3>Com o recurso <mark>TAREFA DE CASA</mark> eles vão amar estudar em casa.</h3>
+        <p>A maioria de nossos alunos acaba não tendo motivação e vontade para treinar e estudar em casa. Mas, sabemos que esse estudo extra vai ajudar muito o seu desenvolvimento.</p>
+        <p>Foi pensando nisso que dentro da Plataforma Jogos Pedagógicos Musicais eu criei uma funcionalidade inovadora para você e seu aluno.</p>
+      </div>
+      <div class="tc-foto">
+        <img src="img/5a4dd02c93e5bae018a21da75f06e91b.webp" alt="Aluno praticando um jogo musical em casa" loading="lazy">
+        <span>Tarefa de casa</span>
+      </div>
+    </div>
+
+    <p class="tc-titulo">Como funciona, passo a passo</p>
+    <div class="tc-passos">
+      <div class="tc-passo"><div class="n">1</div><span class="ic">👩‍🏫</span><h4>Cadastre seu aluno</h4><p>Você cadastra seu aluno dentro da plataforma.</p></div>
+      <div class="tc-passo"><div class="n">2</div><span class="ic">🎯</span><h4>Escolha os jogos</h4><p>Seleciona quais jogos pedagógicos ele pode praticar em casa.</p></div>
+      <div class="tc-passo"><div class="n">3</div><span class="ic">🎮</span><h4>O aluno pratica em casa</h4><p>Isso mesmo!!! Seus alunos terão acesso aos jogos que você quer que ele pratique.</p></div>
+      <div class="tc-passo tc-passo--final"><div class="n">4</div><span class="ic">⭐</span><h4>Você se destaca</h4><p>Esse será seu grande diferencial para se destacar e inovar como professor de música.</p></div>
+    </div>
+
+    <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero a Tarefa de Casa nas minhas aulas</a></div>
+  </div>
+</section>
+
+<!-- ================= BIA CRIATIVA (controlada por MOSTRAR_BIA) ================= -->
+<section class="sec bia" id="secBia">
+  <div class="wrap">
+    <div class="bia-box">
+      <img src="img/d64d971b2eda17cfada44ff13d95a0e0.png" alt="Bia Criativa" loading="lazy" decoding="async">
+      <div class="t">
+        <h2>Assistente IA Bia Criativa</h2>
+        <p>A Bia Criativa é uma assistente de inteligência artificial que entende o universo musical e educacional.</p>
+        <p>Ela te ajuda a criar planos de aula personalizados, atividades, jogos, posts para redes sociais, roteiros de vídeos e ideias criativas em segundos.</p>
+        <p>Mais tempo livre, mais produtividade e muito mais inspiração!</p>
+      </div>
+    </div>
+    <div class="bia-prints">
+      <img src="img/393a4531ad55e38434d39df188786ab4.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
+      <img src="img/e34ac4363ed9d404fac93764eb19f2eb.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
+      <img src="img/09567fb56c0999841175d6177e90f299.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
+      <img src="img/2dd50bb8b3133dd9b16f5451c47445cf.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================= VAI COMPENSAR? (objeção de valor) ================= -->
+<section class="sec valor">
+  <div class="wrap center">
+    <span class="bw-selo"><b>Faça a conta</b></span>
+    <h2 class="titulo">Será que vai compensar o investimento?</h2>
+    <p class="valor-sub">A pergunta certa é quanto custa continuar preparando tudo sozinha.</p>
+    <div class="valor-grid">
+      <div class="vcard"><b class="vnum">R$1,64</b><h3>por dia</h3><p>R$597 por 12 meses de plataforma dá menos de R$2 por dia, com mais de 40 jogos prontos.</p></div>
+      <div class="vcard"><b class="vnum">1 aluno</b><h3>já paga o ano</h3><p>Para a maioria dos professores, uma ou duas mensalidades de um único aluno cobrem o ano inteiro. Se a plataforma ajudar a manter ou conquistar um aluno, ela se pagou.</p></div>
+      <div class="vcard"><b class="vnum">+40</b><h3>jogos sem criar do zero</h3><p>Você não perde mais tempo pesquisando, criando e testando materiais. Escolha o jogo pelo que o aluno precisa praticar e use na próxima aula.</p></div>
+      <div class="vcard vcard--g"><b class="vnum">7 dias</b><h3>para testar sem risco</h3><p>Use nas suas aulas. Se achar que não é para você, a Bianca devolve 100% do valor, sem perguntas.</p></div>
+    </div>
+    <div class="cta"><a href="#incluso" class="btn btn--claro">Ver tudo o que vem na Black Week</a></div>
+  </div>
+</section>
+
+<!-- ================= SATISFAÇÃO ================= -->
+<section class="sec satisf">
+  <div class="center" style="padding:0 20px">
+    <img class="stars" src="img/ca5db17f2c83a402508be134121bc101.jpg" alt="5 estrelas" loading="lazy" decoding="async">
+    <h2 class="titulo">Alto grau de satisfação dos professores</h2>
+  </div>
+  <div class="wrap center">
+    <h3 class="sub-dep">Confira os resultados de alguns professores!</h3>
+    <div class="videos">
+      <div class="video"><button type="button" class="yt" data-yt="HE5lUtvxgTQ" aria-label="Assistir ao vídeo: Depoimento Prof. João"><img src="https://i.ytimg.com/vi/HE5lUtvxgTQ/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="Tlg758AaEgE" aria-label="Assistir ao vídeo: Depoimento Prof. Cíntya"><img src="https://i.ytimg.com/vi/Tlg758AaEgE/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="uIV85FliII8" aria-label="Assistir ao vídeo: Depoimento Prof. Rodolfo"><img src="https://i.ytimg.com/vi/uIV85FliII8/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="ZQ_20RyiqVo" aria-label="Assistir ao vídeo: Depoimento Prof. Lívia"><img src="https://i.ytimg.com/vi/ZQ_20RyiqVo/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="6GIzDHkG67Y" aria-label="Assistir ao vídeo: Depoimento Prof. Glaucimelo"><img src="https://i.ytimg.com/vi/6GIzDHkG67Y/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+      <div class="video"><button type="button" class="yt" data-yt="qlIq-QiFp3o" aria-label="Assistir ao vídeo: Depoimento Prof. Cláudia"><img src="https://i.ytimg.com/vi/qlIq-QiFp3o/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+    </div>
+    <h3 class="sub-dep">Mensagens de quem usa</h3>
+  </div>
+  <div class="carrossel">
+    <button class="seta prev" aria-label="Anterior">‹</button>
+    <div class="trilho">
+      <div class="print"><img src="img/c82815f8ac12fd31de2aca1f45ddbeac.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/655849a9c7be408abe1c095bb1ba1c7b.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/9902e593e52fe338a248ab7e809679d2.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/d1a7d9013dc7589ac40d166b722566dc.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/2f5ba23808f29f0df73ad0e9aca46eae.jpg" alt="Mensagem de professora" loading="lazy"></div>
+      <div class="print"><img src="img/0edfc86ed8cb581a619dccf0763b0dfd.jpg" alt="Mensagem de professora" loading="lazy"></div>
+    </div>
+    <button class="seta next" aria-label="Próximo">›</button>
+  </div>
+  <p class="passe">Passe para o lado</p>
+  <div class="wrap">
+    <div class="video"><button type="button" class="yt" data-yt="Ns8EooNB8zg" aria-label="Assistir ao vídeo: O que dizem os professores"><img src="https://i.ytimg.com/vi/Ns8EooNB8zg/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
+    <div class="cta"><a href="#planos" class="btn btn--claro">Quero esse resultado nas minhas aulas</a></div>
+  </div>
+</section>
+
 <!-- ================= O QUE VEM COM A PLATAFORMA (briefing) ================= -->
 <section class="sec bonus" id="incluso">
   <div class="bonus-fundo"></div>
@@ -708,93 +842,6 @@ footer a{color:var(--amarelo)}
   </div>
 </section>
 
-<!-- ================= TAREFA DE CASA (passo a passo) ================= -->
-<section class="sec tarefa" id="tarefa">
-  <div class="wrap">
-    <div class="tc-topo">
-      <div>
-        <span class="tc-selo">🏠 Funcionalidade exclusiva</span>
-        <h2>Seus alunos não estudam e nem praticam em casa?</h2>
-        <h3>Com o recurso <mark>TAREFA DE CASA</mark> eles vão amar estudar em casa.</h3>
-        <p>A maioria de nossos alunos acaba não tendo motivação e vontade para treinar e estudar em casa. Mas, sabemos que esse estudo extra vai ajudar muito o seu desenvolvimento.</p>
-        <p>Foi pensando nisso que dentro da Plataforma Jogos Pedagógicos Musicais eu criei uma funcionalidade inovadora para você e seu aluno.</p>
-      </div>
-      <div class="tc-foto">
-        <img src="img/5a4dd02c93e5bae018a21da75f06e91b.webp" alt="Aluno praticando um jogo musical em casa" loading="lazy">
-        <span>Tarefa de casa</span>
-      </div>
-    </div>
-
-    <p class="tc-titulo">Como funciona, passo a passo</p>
-    <div class="tc-passos">
-      <div class="tc-passo"><div class="n">1</div><span class="ic">👩‍🏫</span><h4>Cadastre seu aluno</h4><p>Você cadastra seu aluno dentro da plataforma.</p></div>
-      <div class="tc-passo"><div class="n">2</div><span class="ic">🎯</span><h4>Escolha os jogos</h4><p>Seleciona quais jogos pedagógicos ele pode praticar em casa.</p></div>
-      <div class="tc-passo"><div class="n">3</div><span class="ic">🎮</span><h4>O aluno pratica em casa</h4><p>Isso mesmo!!! Seus alunos terão acesso aos jogos que você quer que ele pratique.</p></div>
-      <div class="tc-passo tc-passo--final"><div class="n">4</div><span class="ic">⭐</span><h4>Você se destaca</h4><p>Esse será seu grande diferencial para se destacar e inovar como professor de música.</p></div>
-    </div>
-
-    <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero a Tarefa de Casa nas minhas aulas</a></div>
-  </div>
-</section>
-
-<!-- ================= BIA CRIATIVA (controlada por MOSTRAR_BIA) ================= -->
-<section class="sec bia" id="secBia">
-  <div class="wrap">
-    <div class="bia-box">
-      <img src="img/d64d971b2eda17cfada44ff13d95a0e0.png" alt="Bia Criativa" loading="lazy" decoding="async">
-      <div class="t">
-        <h2>Assistente IA Bia Criativa</h2>
-        <p>A Bia Criativa é uma assistente de inteligência artificial que entende o universo musical e educacional.</p>
-        <p>Ela te ajuda a criar planos de aula personalizados, atividades, jogos, posts para redes sociais, roteiros de vídeos e ideias criativas em segundos.</p>
-        <p>Mais tempo livre, mais produtividade e muito mais inspiração!</p>
-      </div>
-    </div>
-    <div class="bia-prints">
-      <img src="img/393a4531ad55e38434d39df188786ab4.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
-      <img src="img/e34ac4363ed9d404fac93764eb19f2eb.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
-      <img src="img/09567fb56c0999841175d6177e90f299.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
-      <img src="img/2dd50bb8b3133dd9b16f5451c47445cf.jpeg" alt="Conversa com a Bia Criativa" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- ================= SATISFAÇÃO ================= -->
-<section class="sec satisf">
-  <div class="center" style="padding:0 20px">
-    <img class="stars" src="img/ca5db17f2c83a402508be134121bc101.jpg" alt="5 estrelas" loading="lazy" decoding="async">
-    <h2 class="titulo">Alto grau de satisfação dos professores</h2>
-  </div>
-  <div class="wrap center">
-    <h3 class="sub-dep">Confira os resultados de alguns professores!</h3>
-    <div class="videos">
-      <div class="video"><button type="button" class="yt" data-yt="HE5lUtvxgTQ" aria-label="Assistir ao vídeo: Depoimento Prof. João"><img src="https://i.ytimg.com/vi/HE5lUtvxgTQ/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-      <div class="video"><button type="button" class="yt" data-yt="Tlg758AaEgE" aria-label="Assistir ao vídeo: Depoimento Prof. Cíntya"><img src="https://i.ytimg.com/vi/Tlg758AaEgE/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-      <div class="video"><button type="button" class="yt" data-yt="uIV85FliII8" aria-label="Assistir ao vídeo: Depoimento Prof. Rodolfo"><img src="https://i.ytimg.com/vi/uIV85FliII8/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-      <div class="video"><button type="button" class="yt" data-yt="ZQ_20RyiqVo" aria-label="Assistir ao vídeo: Depoimento Prof. Lívia"><img src="https://i.ytimg.com/vi/ZQ_20RyiqVo/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-      <div class="video"><button type="button" class="yt" data-yt="6GIzDHkG67Y" aria-label="Assistir ao vídeo: Depoimento Prof. Glaucimelo"><img src="https://i.ytimg.com/vi/6GIzDHkG67Y/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-      <div class="video"><button type="button" class="yt" data-yt="qlIq-QiFp3o" aria-label="Assistir ao vídeo: Depoimento Prof. Cláudia"><img src="https://i.ytimg.com/vi/qlIq-QiFp3o/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-    </div>
-    <h3 class="sub-dep">Mensagens de quem usa</h3>
-  </div>
-  <div class="carrossel">
-    <button class="seta prev" aria-label="Anterior">‹</button>
-    <div class="trilho">
-      <div class="print"><img src="img/c82815f8ac12fd31de2aca1f45ddbeac.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/655849a9c7be408abe1c095bb1ba1c7b.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/9902e593e52fe338a248ab7e809679d2.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/d1a7d9013dc7589ac40d166b722566dc.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/2f5ba23808f29f0df73ad0e9aca46eae.jpg" alt="Mensagem de professora" loading="lazy"></div>
-      <div class="print"><img src="img/0edfc86ed8cb581a619dccf0763b0dfd.jpg" alt="Mensagem de professora" loading="lazy"></div>
-    </div>
-    <button class="seta next" aria-label="Próximo">›</button>
-  </div>
-  <p class="passe">Passe para o lado</p>
-  <div class="wrap">
-    <div class="video"><button type="button" class="yt" data-yt="Ns8EooNB8zg" aria-label="Assistir ao vídeo: O que dizem os professores"><img src="https://i.ytimg.com/vi/Ns8EooNB8zg/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-    <div class="cta"><a href="#planos" class="btn btn--claro">Quero esse resultado nas minhas aulas</a></div>
-  </div>
-</section>
-
 <!-- ================= OFERTA ================= -->
 <!-- Fita Black Week -->
 <div class="fita-wrap"><div class="faixa faixa--fita" aria-hidden="true"><div class="faixa-trilho"><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span><span>Black Week<em>★</em>Plataforma + 6 bônus<em>★</em>Até 30/11<em>★</em></span></div></div></div>
@@ -836,6 +883,7 @@ footer a{color:var(--amarelo)}
         <p class="parc"><small>12x de</small><b>R$<span data-parcela>59,94</span></b></p>
         <p class="vista">ou <b>R$597</b> à vista</p>
         <span class="eco ancora">Economize R$2.050 nesta Black Week</span>
+        <p class="card-cd" id="cardCd">⏳ Termina em <b data-cd2="d">00</b>d <b data-cd2="h">00</b>h <b data-cd2="m">00</b>m <b data-cd2="s">00</b>s</p>
         <a href="#planos" data-checkout class="btn btn--escuro">Quero aproveitar a Black Week!</a>
         <p class="seg">Compra segura via Hotmart · 7 dias de garantia</p>
       </div>
@@ -853,6 +901,28 @@ footer a{color:var(--amarelo)}
       <p>Se você assinar a Plataforma Jogos Pedagógicos Musicais e no prazo de até 7 dias achar que a plataforma não é para você, eu te devolverei cada centavo pago, eu mesmo reembolso 100% você, sem complicações e sem perguntas. Simples e sem burocracia!</p>
       <a href="#planos" class="btn btn--claro">Quero testar por 7 dias</a>
     </div>
+  </div>
+</section>
+
+<!-- ================= SUPORTE ================= -->
+<section class="sec suporte">
+  <div class="wrap">
+    <div class="sup-top">
+      <div class="ic"><img src="img/e0bf06b5ecbbfe15b20be8b50be5db59.svg" alt="" loading="lazy" decoding="async"></div>
+      <div>
+        <h2>Aqui você tem o melhor suporte do Brasil.</h2>
+        <p class="it">Eu faço questão de pegar na sua mão e te ajudar em cada momento.</p>
+        <p>Para garantir que você receba um <b>serviço de atendimento diferente de TUDO que já viu</b> em qualquer outro lugar, ao se tornar membro da Plataforma Jogos Pedagógicos Musicais, <b>você receberá meu Whats particular</b>. Isso mesmo, serei sua mentora particular.</p>
+        <p>Você terá <b>meu acompanhamento VIP</b> para você <b>usar todos os recursos de forma prática e criativa.</b></p>
+        <p>Com esse <b>acesso livre a mim</b>, você pode enviar vídeos, áudios e mensagens a qualquer momento e <b>te responderei prontamente sem burocracia.</b></p>
+      </div>
+    </div>
+    <div class="sup-prints">
+      <img src="img/5c04e2d3753a8762857edbecb2e31f9c.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
+      <img src="img/493daa1064b060635e69005fde380579.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
+      <img src="img/ef0970ed84c2c54ee1115245d7aecf38.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
+    </div>
+    <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero o suporte VIP da Bianca</a></div>
   </div>
 </section>
 
@@ -901,41 +971,6 @@ footer a{color:var(--amarelo)}
   </div>
 </section>
 
-<!-- ================= POR DENTRO ================= -->
-<section class="sec dentro2">
-  <div class="wrap">
-    <div>
-      <h2>Como é a Plataforma por dentro?</h2>
-      <p>Com metologia inovadora e validada, os jogos pedagógicos foram feitos para quem quer dar aulas online e presenciais mais criativas e cheias de recursos, sem precisar ficar tentando criar materiais por conta própria.</p>
-      <p>Com conteúdo programático planejado, a plataforma Jogos Pedagógicos Musicais vai simplificar o seu dia a dia no ensino da música para seus alunos. Para facilitar ainda mais o aprendizado, os jogos pedagógicos desenvolvidos possuem um tutorial com um passo a passo e objetivos pedagógicos descritos para você e seu aluno aproveitarem ao máximo todos os recursos.</p>
-      <a href="#planos" class="btn btn--amarelo">Quero usar a plataforma nas aulas</a>
-    </div>
-    <div class="video"><button type="button" class="yt" data-yt="B-aXqzgaHKE" aria-label="Assistir ao vídeo: Conheça a plataforma por dentro"><img src="https://i.ytimg.com/vi/B-aXqzgaHKE/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span></button></div>
-  </div>
-</section>
-
-<!-- ================= SUPORTE ================= -->
-<section class="sec suporte">
-  <div class="wrap">
-    <div class="sup-top">
-      <div class="ic"><img src="img/e0bf06b5ecbbfe15b20be8b50be5db59.svg" alt="" loading="lazy" decoding="async"></div>
-      <div>
-        <h2>Aqui você tem o melhor suporte do Brasil.</h2>
-        <p class="it">Eu faço questão de pegar na sua mão e te ajudar em cada momento.</p>
-        <p>Para garantir que você receba um <b>serviço de atendimento diferente de TUDO que já viu</b> em qualquer outro lugar, ao se tornar membro da Plataforma Jogos Pedagógicos Musicais, <b>você receberá meu Whats particular</b>. Isso mesmo, serei sua mentora particular.</p>
-        <p>Você terá <b>meu acompanhamento VIP</b> para você <b>usar todos os recursos de forma prática e criativa.</b></p>
-        <p>Com esse <b>acesso livre a mim</b>, você pode enviar vídeos, áudios e mensagens a qualquer momento e <b>te responderei prontamente sem burocracia.</b></p>
-      </div>
-    </div>
-    <div class="sup-prints">
-      <img src="img/5c04e2d3753a8762857edbecb2e31f9c.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
-      <img src="img/493daa1064b060635e69005fde380579.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
-      <img src="img/ef0970ed84c2c54ee1115245d7aecf38.webp" alt="Conversa no WhatsApp com a Bianca" loading="lazy">
-    </div>
-    <div class="cta"><a href="#planos" class="btn btn--amarelo">Quero o suporte VIP da Bianca</a></div>
-  </div>
-</section>
-
 <!-- ================= AUTORA ================= -->
 <section class="autora">
   <div class="wrap">
@@ -953,6 +988,7 @@ footer a{color:var(--amarelo)}
   <div class="wrap center">
     <h2 class="titulo">Dúvidas Frequentes</h2>
     <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Vai valer a pena para mim?</button><div class="faq-a"><p>Faça a conta: R$597 por 12 meses dá menos de R$2 por dia, e uma ou duas mensalidades de um único aluno costumam cobrir o ano. Além disso, você tem 7 dias de garantia: use os jogos nas suas aulas e, se achar que não é para você, recebe 100% de volta, sem perguntas.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Não sei mexer com informática? Funciona pra mim?</button><div class="faq-a"><p>Claro!!! Os jogos estão prontinhos, você não precisa fazer nada.<br>Você só precisa acessar o jogo e pronto! Além de ser fácil eu criei uma instrução detalhada em texto em cada jogo e gravei uma vídeo aula de como usar cada jogo também.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">O que preciso para usar os jogos?</button><div class="faq-a"><p>Basta você acessar a plataforma de qualquer dispositivo conectado à internet e usar. Todos os jogos estão na plataforma para acessar de forma simples e prática!</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Como os jogos estimulam o aprendizado dentro da aula de música?</button><div class="faq-a"><p>A interação criada pelo jogo motiva o aluno a aprender para vencer o desafio. A recompensa, a pontuação, o grau de dificuldade… tudo isso estimula o cérebro do aluno a criar conexões para resolver o problema, aprendendo muito mais rápido, de maneira leve e divertida. E muitas vezes, até nós professores, nos divertimos junto.</p></div></div>
@@ -1003,6 +1039,7 @@ footer a{color:var(--amarelo)}
     var r = fim - Date.now();
     if (r <= 0){
       document.getElementById('cd').hidden = true;
+      var cc = document.getElementById('cardCd'); if (cc) cc.hidden = true;
       document.getElementById('topoTxt').innerHTML = 'A <b>BLACK WEEK</b> TERMINOU';
       return false;
     }
@@ -1010,6 +1047,7 @@ footer a{color:var(--amarelo)}
     el.h.textContent = pad(Math.floor(r/36e5)%24);
     el.m.textContent = pad(Math.floor(r/6e4)%60);
     el.s.textContent = pad(Math.floor(r/1e3)%60);
+    ['d','h','m','s'].forEach(function(k){ var e2 = document.querySelector('[data-cd2="'+k+'"]'); if (e2) e2.textContent = el[k].textContent; });
     return true;
   }
   if (tick()) { var iv = setInterval(function(){ if(!tick()) clearInterval(iv); }, 1000); }
