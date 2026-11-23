@@ -71,7 +71,6 @@ src="https://www.facebook.com/tr?id=4709244815771841&ev=PageView&noscript=1"/ lo
 <meta name="twitter:image" content="https://blackweek.jogospedagogicosmusicais.com.br/img/compartilhar.jpg">
 <link rel="icon" href="img/logo-jpm.png">
 <link rel="preconnect" href="https://scripts.converteai.net" crossorigin>
-<link rel="preload" as="image" href="img/08c591dc08fec71bf85ce9ec909ac1be.webp" media="(max-width:760px)" fetchpriority="high">
 <style>
 /* ============================================================
    CORES DA MARCA NOVA (logo / página oferta.)
@@ -152,12 +151,12 @@ h1,h2,h3{line-height:1.2}
 .hero .btn{min-width:300px}
 @media(max-width:760px){
   .hero{min-height:0}
-  .hero-bg,.hero-pessoa{background-image:url(img/08c591dc08fec71bf85ce9ec909ac1be.webp);background-position:center top;background-size:100% auto;background-color:var(--roxo-esc)}
-  .hero-pessoa{-webkit-mask-image:radial-gradient(ellipse 36% 21% at 50% 25%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 36% 21% at 50% 25%,#000 62%,transparent 100%)}
-  .hero:after{background:linear-gradient(180deg,rgba(43,38,85,0) 40%,rgba(43,38,85,.7) 70%)}
+  .hero{background:radial-gradient(circle at 50% 52%,rgba(140,130,235,.5) 0%,rgba(140,130,235,0) 55%),radial-gradient(circle at 0% 100%,rgba(230,185,104,.16) 0%,rgba(230,185,104,0) 45%),linear-gradient(170deg,#453e86 0%,var(--roxo-esc) 50%,#1d1838 100%)}
+  .hero-bg,.hero-pessoa{display:none}
+  .hero:after{background:none}
   .hero-top .logo{height:52px}
   .btn-assinante{padding:8px 16px;font-size:.74rem}
-  .hero-txt{margin-top:78vw;text-align:center;max-width:none}
+  .hero-txt{margin-top:0;text-align:center;max-width:none}
   .prof{justify-content:center}
   .hero .btn{min-width:0;width:100%}
 }
@@ -469,13 +468,11 @@ body.com-ancora .sem-ancora{display:none!important}
   .hero-grid .hero-txt>*{order:1;align-self:center}
   .hero-grid .hero-txt>h1,.hero-grid .hero-txt>p{align-self:stretch}
   .hero-grid .hero-txt>h1~*{order:3}
-  .vsl{order:2;margin:4px 0 16px;border-width:2px;border-radius:12px}
-  .hero:after{background:linear-gradient(180deg,rgba(43,38,85,0) 30%,rgba(43,38,85,.75) 55%)}
+  .hero-grid .hero-txt>.prof{order:4;margin:18px 0 0}
+  .vsl{order:2;margin:16px 0 4px;border-width:2px;border-radius:12px}
   .hero .wrap{padding-top:10px;padding-bottom:26px}
   .hero-top .logo{height:46px;margin:0}
-  .hero-bg,.hero-pessoa{background-size:100% auto;background-position:center 20px}
-  .hero-pessoa{-webkit-mask-image:radial-gradient(ellipse 130px 175px at 50% 200px,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 130px 175px at 50% 200px,#000 60%,transparent 100%)}
-  .hero-grid{padding-top:270px}
+  .hero-grid{padding-top:22px}
   .hero .bw-selo{margin-bottom:10px;padding:5px 12px;font-size:.7rem;letter-spacing:2px}
   .prof{margin-bottom:10px;gap:8px}
   .prof .av img{width:32px;height:32px;margin-left:-10px}
